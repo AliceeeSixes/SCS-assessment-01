@@ -1,0 +1,25 @@
+
+
+
+img.social {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+a.social {
+    display: inline-block;
+    background: $dark-grey;
+
+}
+
+@each $social, $colour in $social--colours {
+    // set hover colours based on link destination
+    a.social[href*="#{$social}"] {
+        &:hover {
+            background: $colour;
+        }
+    }
+}

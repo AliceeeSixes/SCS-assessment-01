@@ -6,3 +6,36 @@ $dark-grey : #212330;
 
 $blue: #4387F6;
 $green: #00B67B;
+
+// Button Colours
+$blue-bayoux : #526781;
+$cerulean-blue : #306CBC;
+$eucalyptus : #25A25A;
+$tall-poppy : #C02C2C;
+$affair : #80549C;
+$red-ribbon : #DE093F;
+$cognac : #A8341C;
+
+// Socials Colours
+$san-marino : #405C9C;
+$deep-cerulean : #0874b4;
+$cerulean : #08acec;
+$cerise-red : #e03474;
+
+
+$button--colours : (
+    1 : $blue-bayoux,
+    2 : $cerulean-blue,
+    3 : $eucalyptus,
+    4 : $tall-poppy,
+    5 : $affair,
+    6 : $red-ribbon,
+    7 : $cognac,
+);
+
+$social--colours : (
+    facebook : $san-marino,
+    linkedin : $deep-cerulean,
+    twitter : $cerulean,
+    instagram : $cerise-red,
+)

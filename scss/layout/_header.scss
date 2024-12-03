@@ -1,6 +1,6 @@
 .header__toggle-nav {
-    height: 20px;
-    width: 20p;
+    height: 50px;
+    width: 50px;
 
 }
 
@@ -8,7 +8,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0 auto;
+    margin: auto auto;
     width: 60%;
     justify-content: space-between;
+}
+
+#header__img {
+    margin: auto auto;
 }

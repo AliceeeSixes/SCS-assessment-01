@@ -1,0 +1,18 @@
+.card {
+    box-shadow: 0px 0px 10px $light-grey;
+
+}
+
+
+
+@each $index, $colour in $button--colours {
+    .card:nth-child(#{$index}) {
+        & .button {
+            background-color: $colour;
+        }
+        & .logo {
+            color: $colour;
+        }
+    }
+
+}

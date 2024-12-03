@@ -12,3 +12,18 @@
         background: $green;
     }
 }
+
+.topnav__button {
+    background-color: $grey;
+    border: none;
+    color: white;
+    padding: 20px;
+}
+
+@each $button, $colour in $button--colours {
+    .topnav__button:nth-child(#{$button}) {
+        &:hover{
+            background-color: lighten($colour, 10%);
+        }
+    }
+}
