@@ -1,0 +1,31 @@
+#topnav {
+    background: $grey;
+}
+
+.topnav__container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+
+
+#sidenav {
+    display: none;
+    transition: 0.3s ease;
+
+
+
+    &.is-enabled {
+        display: block;
+        width: 100px;
+        background: orange;
+        height: 100vh;
+    }
+
+
+}

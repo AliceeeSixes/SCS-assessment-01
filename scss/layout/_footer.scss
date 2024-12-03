@@ -1,0 +1,43 @@
+footer {
+    background: $grey;
+    color: white;
+
+}
+
+#footer__grid {
+    display: grid;
+    grid-template-columns: 2fr, repeat(4, 1fr);
+    grid-template-areas: "a b c d e";
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+    gap: 20px;
+}
+
+
+#footer__logo {
+    grid-area: a;
+}
+
+#footer__about {
+    grid-area: b;
+}
+
+#footer__services {
+    grid-area: c;
+}
+
+#footer__industries {
+    grid-area: d;
+}
+
+#footer__locations {
+    grid-area: e;
+}
+
+#footer__bottom {
+    background: $dark_grey;
+    height: 20px;
+    margin-bottom: 0px;
+    
+}
