@@ -17,7 +17,7 @@
     background-color: $grey;
     border: none;
     color: white;
-    padding: 20px;
+    height: 60px;
 }
 
 @each $button, $colour in $button--colours {

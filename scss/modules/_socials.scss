@@ -2,17 +2,17 @@
 
 
 img.social {
-    width: 20px;
-    height: 20px;
+    height: 60%;
+    margin: 20%;
     filter: invert(100%);
-    padding: 10px 20px;
-    display: inline-block;
+    display: block;
 }
 
 a.social {
     display: inline-block;
     background: $dark-grey;
-
+    height: 60px;
+    width: 60px;
 }
 
 @each $social, $colour in $social--colours {

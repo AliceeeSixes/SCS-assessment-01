@@ -1,5 +1,6 @@
 * {
     font-family: $font-stack--primary;
+    box-sizing: border-box;
 
 }
 
@@ -81,3 +82,9 @@ ul {
 }
 
 
+button {
+    border: none;
+    padding: none;
+    margin: none;
+    display: inline-block;
+}
