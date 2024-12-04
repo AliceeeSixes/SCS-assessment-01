@@ -21,16 +21,20 @@
 
 
 .header__button {
-    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 56px;
     border-radius: 3px;
     font-size: 1.2em;
-    &:first-of-type {
+    align-items: center;
+    display: flex;
+    &:nth-of-type(2) {
         background: lighten($cerulean-blue, 10%);
         &:hover {
             background: $cerulean-blue;
         }
     }
-    &:last-of-type {
+    &:nth-of-type(3) {
         background: $light-grey;
         &:hover {
             background: darken($light-grey, 10%);
@@ -42,12 +46,12 @@
     background: $dark-grey;
     padding: 5px;
     border-radius: 3px;
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
 }
 
 form.searchbar {
-    height: 60px;
+    height: 56px;
     margin: auto 0;
     padding: 0;
 }
@@ -69,8 +73,8 @@ input[type="search"] {
 button.searchicon {
     display: inline-block;
     margin: auto 0;
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
     background: $light-grey;
     border-radius: 0 3px 3px 0;
     &:hover {
@@ -80,5 +84,12 @@ button.searchicon {
 
 .searchicon img {
     margin: auto;
+    filter: invert(100%);
+}
+
+.icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
     filter: invert(100%);
 }

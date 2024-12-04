@@ -366,6 +366,9 @@ button {
   margin: none;
   display: inline-block; }
 
+h4 {
+  font-weight: 400; }
+
 #topnav {
   background: #323544; }
 
@@ -403,27 +406,31 @@ button {
     margin-right: 10px; }
 
 .header__button {
-  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 56px;
   border-radius: 3px;
-  font-size: 1.2em; }
-  .header__button:first-of-type {
+  font-size: 1.2em;
+  align-items: center;
+  display: flex; }
+  .header__button:nth-of-type(2) {
     background: #4d86d2; }
-    .header__button:first-of-type:hover {
+    .header__button:nth-of-type(2):hover {
       background: #306CBC; }
-  .header__button:last-of-type {
+  .header__button:nth-of-type(3) {
     background: #a3a8ac; }
-    .header__button:last-of-type:hover {
+    .header__button:nth-of-type(3):hover {
       background: #888f94; }
 
 .header__toggle-nav {
   background: #212330;
   padding: 5px;
   border-radius: 3px;
-  height: 60px;
-  width: 60px; }
+  height: 56px;
+  width: 56px; }
 
 form.searchbar {
-  height: 60px;
+  height: 56px;
   margin: auto 0;
   padding: 0; }
 
@@ -443,8 +450,8 @@ input[type="search"] {
 button.searchicon {
   display: inline-block;
   margin: auto 0;
-  height: 60px;
-  width: 60px;
+  height: 56px;
+  width: 56px;
   background: #a3a8ac;
   border-radius: 0 3px 3px 0; }
   button.searchicon:hover {
@@ -452,6 +459,12 @@ button.searchicon {
 
 .searchicon img {
   margin: auto;
+  filter: invert(100%); }
+
+.icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
   filter: invert(100%); }
 
 .carousel {
