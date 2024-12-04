@@ -62,6 +62,10 @@
                     border-width: 50px 75px 0 75px;
                 }
             }
+            & .submenu {
+                display: block;
+                background: $colour;
+            }
         }
         & img {
             // change logo colours to match label styling
