@@ -40,6 +40,9 @@
             background: darken($light-grey, 10%);
         }
     }
+    @media (max-width: $break-medium) {
+        display: none;
+    }
 }
 
 .header__toggle-nav {
@@ -54,9 +57,13 @@ form.searchbar {
     height: 56px;
     margin: auto 0;
     padding: 0;
+    @media (max-width: $break-large) {
+        display: none;
+    }
 }
 
 input[type="search"] {
+
     display: inline;
     height: 100%;
     width: 200px;
@@ -80,11 +87,17 @@ button.searchicon {
     &:hover {
         background: darken($light-grey, 10%);
     }
+    @media (max-width: $break-large) {
+        display: none;
+    }
 }
 
 .searchicon img {
     margin: auto;
     filter: invert(100%);
+    @media (max-width: $break-large) {
+        display: none;
+    }
 }
 
 .icon {
