@@ -19,13 +19,13 @@
     color: white;
     height: fit-content;
     @media (min-width: $break-medium) {
-        width: 80px;
+        width: 110px;
     }
     @media (min-width: $break-large) {
-        width: 100px;
+        width: 130px;
     }
     @media (min-width: $break-xl) {
-        width: 120px;
+        width: 150px;
     }
     & h4 {
         text-transform: uppercase;
@@ -53,13 +53,13 @@
                 transform: rotate(0deg);
                 position: fixed;
                 @media (min-width: $break-medium) {
-                    border-width: 50px 40px 0 40px;
+                    border-width: 50px 55px 0 55px;
                 }
                 @media (min-width: $break-large) {
-                    border-width: 50px 50px 0 50px;
+                    border-width: 50px 65px 0 65px;
                 }
                 @media (min-width: $break-xl) {
-                    border-width: 50px 60px 0 60px;
+                    border-width: 50px 75px 0 75px;
                 }
             }
         }

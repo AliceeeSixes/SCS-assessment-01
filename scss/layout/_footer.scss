@@ -27,7 +27,7 @@ footer {
         gap: auto;
     }
 
-    @media (min-width: $break-large) {
+    @media (min-width: $break-xl) {
         grid-template-columns: 2fr repeat(4, 1fr);
     }
 
