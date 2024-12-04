@@ -1,18 +1,61 @@
 .card {
     box-shadow: 0px 0px 10px $light-grey;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s ease;
+    text-align: center;
+}
 
+.card__button {
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+
+.card__icon {
+    display: block;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    & img {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+
+@each $index, $colour in $button--colours {
+    .card:nth-of-type(#{$index}) {
+            // set button and icon colours
+            & .card__button,
+            & .card__icon {
+                background: $colour;
+            }
+
+            // invert colours on hover - main background
+            &:hover {
+                background: $colour;
+                & .card__button,
+                & .card__icon {
+                    background: white;
+                    color: $colour;
+                }
+            }
+    }
 }
 
 
 
-@each $index, $colour in $button--colours {
-    .card:nth-child(#{$index}) {
-        & .button {
-            background-color: $colour;
-        }
-        & .logo {
-            color: $colour;
-        }
+// Card hover effects
+
+.card:hover {
+    transform: translate(0, -5px);
+    color: white;
+    & a {
+        color: white;
     }
 
 }

@@ -49,11 +49,14 @@ section {
 
 
 a {
-    color: white;
+    color: $grey;
     text-decoration: none;
 
     &.inline {
         display: inline;
+    }
+    &.white {
+        color: white;
     }
 }
 
@@ -91,4 +94,10 @@ button {
 
 h4 {
     font-weight: $font-weight--medium;
+}
+
+h2 {
+    font-weight: $font-weight--medium;
+    text-align: center;
+    font-size: 1.3em;
 }
