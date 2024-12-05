@@ -50,6 +50,9 @@
             & .card__icon {
                 background: white;
                 color: lighten($colour, 10%);
+                & img {
+                    filter: opacity(0.5) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour});
+                }
             }
         }
     }
@@ -69,7 +72,7 @@
 
 #card__grid {
     width: 60%;
-    margin: auto;
+    margin: 50px auto;
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(12, 1fr); 

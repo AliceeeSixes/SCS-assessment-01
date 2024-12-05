@@ -5,11 +5,20 @@
     background: $dark-grey;
     margin: 10px;
     font-size: 1.1em;
+    &:hover {
+        background: darken($dark-grey, 10%);
+    }
     &.blue {
         background: $blue;
+        &:hover {
+            background: darken($blue, 10%);
+        }
     }
     &.green {
         background: $green;
+        &:hover {
+            background: darken($green, 10%);
+        }
     }
 }
 
@@ -51,7 +60,7 @@
                 border-style: solid;
                 border-color: lighten($colour, 10%) transparent transparent transparent;
                 transform: rotate(0deg);
-                position: fixed;
+                position: absolute;
                 @media (min-width: $break-medium) {
                     border-width: 50px 55px 0 55px;
                 }
