@@ -59,8 +59,14 @@ footer {
 
 #footer__bottom {
     background: $dark_grey;
-    height: 20px;
+    height: fit-content;
     margin-bottom: 0px;
+    padding: 15px;
+    font-size: .8em;
+    p {
+        width: 60%;
+        margin: auto;
+    }
     
 }
 
