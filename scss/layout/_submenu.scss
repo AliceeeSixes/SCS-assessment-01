@@ -1,7 +1,9 @@
 .submenu {
     width: 100vw;
     height: fit-content;
+    position: absolute;
     display: none;
+    left: 0;
     a:hover {
         text-decoration: underline;
     }
@@ -19,5 +21,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 50px;
+    li {
+        width: 100%;
+        font-size: 1.2em;
+    }
 
 }
