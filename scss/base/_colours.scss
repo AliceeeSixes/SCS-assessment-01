@@ -2,6 +2,7 @@
 
 $light-grey: rgb(163,168,172);
 $grey : rgb(50,53,68);
+$med-grey: lighten($grey, 20%);
 $dark-grey : #212330;
 
 $blue: #4387F6;
@@ -15,6 +16,11 @@ $tall-poppy : #C02C2C;
 $affair : #80549C;
 $red-ribbon : #DE093F;
 $cognac : #A8341C;
+
+
+// News Colours
+$gamboge : #e08c0c;
+
 
 // Socials Colours
 $san-marino : #405C9C;
@@ -38,4 +44,10 @@ $social--colours : (
     linkedin : $deep-cerulean,
     twitter : $cerulean,
     instagram : $cerise-red,
-)
+);
+
+$news--colours : (
+    1 : lighten($eucalyptus, 10%),
+    2 : lighten($affair, 10%),
+    3 : $gamboge,
+);

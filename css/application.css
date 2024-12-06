@@ -617,7 +617,8 @@ footer {
 .card__button {
   border-radius: 3px;
   padding: 10px;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  color: white; }
 
 .card__icon {
   display: block;
@@ -1037,11 +1038,107 @@ a.social[href*="instagram"]:hover {
 
 .news__item {
   box-shadow: 0 0 10px #323544;
-  height: 400px;
-  width: 30%;
+  height: fit-content;
+  padding: 0 0 20px;
+  width: 370px;
   display: inline-block;
   transition: 0.5s ease; }
   .news__item:hover {
     transform: translate(0, -10px); }
+  .news__item p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; }
+  .news__item img {
+    width: 100%; }
+
+.news__item:nth-child(1) .news__item--button {
+  background: #2ecc71; }
+.news__item:nth-child(1) h3 {
+  color: #2ecc71; }
+.news__item:nth-child(1) .news__item--inset {
+  background: #2ecc71; }
+
+.news__item:nth-child(2) .news__item--button {
+  background: #9971b2; }
+.news__item:nth-child(2) h3 {
+  color: #9971b2; }
+.news__item:nth-child(2) .news__item--inset {
+  background: #9971b2; }
+
+.news__item:nth-child(3) .news__item--button {
+  background: #e08c0c; }
+.news__item:nth-child(3) h3 {
+  color: #e08c0c; }
+.news__item:nth-child(3) .news__item--inset {
+  background: #e08c0c; }
+
+.news__item--content {
+  width: 85%;
+  margin: auto;
+  color: #5d637f; }
+  .news__item--content h3 {
+    margin: 30px auto 0;
+    height: 40px;
+    font-weight: 700;
+    font-size: 1em; }
+  .news__item--content p {
+    font-size: .8em;
+    font-weight: 300;
+    letter-spacing: .08em; }
+
+.news__item--button {
+  margin-top: 20px;
+  width: 130px;
+  height: 50px;
+  border-radius: 3px;
+  color: white;
+  align-content: center;
+  text-align: center;
+  font-size: 1.2em; }
+
+.news__item--author {
+  border-top: 1px #a3a8ac solid;
+  margin-top: 30px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row; }
+
+.news__item--image {
+  height: 210px;
+  position: relative;
+  flex: 0; }
+
+.news__item--avatar {
+  display: inline-block;
+  margin: auto;
+  height: 50px;
+  width: 50px; }
+  .news__item--avatar img {
+    border-radius: 50%; }
+
+.news__item--inset {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  display: block;
+  width: 80px;
+  height: 25px;
+  align-content: center;
+  text-align: center;
+  font-size: .9em;
+  font-weight: 700; }
+
+.news__item--author-details {
+  display: inline-block;
+  margin-left: 20px;
+  flex: 1;
+  font-size: 1.1em; }
+  .news__item--author-details p:first-of-type {
+    font-weight: 700;
+    color: #323544;
+    line-height: 1.5; }
 
 /*# sourceMappingURL=application.css.map */
