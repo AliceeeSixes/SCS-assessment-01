@@ -1,11 +1,9 @@
 #client__grid {
     display: grid;
-    @media (min-width: $break-medium) {
-        grid-auto-flow: column;
-    }
+
 
     grid-auto-columns: minmax(300px, 1fr);
-    width: 60%;
+
     margin: 0 auto;
     gap: 20px;
 }
@@ -22,4 +20,21 @@
 #stars {
     color: goldenrod;
     font-size: 3em;
+}
+
+
+
+// media queries
+
+#client__grid {
+    width: 60%;
+    @media (min-width: $break-medium) {
+        grid-auto-flow: column;
+    }
+    @media (min-width: $break-large) {
+        width: 930px;
+    }
+    @media (min-width: $break-xl) {
+        width: 1200px;
+    }
 }

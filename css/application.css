@@ -590,16 +590,24 @@ button.searchicon {
 #client__grid {
   display: grid;
   grid-auto-columns: minmax(300px, 1fr);
-  width: 60%;
   margin: 0 auto;
   gap: 20px; }
-  @media (min-width: 950px) {
-    #client__grid {
-      grid-auto-flow: column; } }
 
 #stars {
   color: goldenrod;
   font-size: 3em; }
+
+#client__grid {
+  width: 60%; }
+  @media (min-width: 950px) {
+    #client__grid {
+      grid-auto-flow: column; } }
+  @media (min-width: 1200px) {
+    #client__grid {
+      width: 930px; } }
+  @media (min-width: 1300px) {
+    #client__grid {
+      width: 1200px; } }
 
 footer {
   background: #323544;
