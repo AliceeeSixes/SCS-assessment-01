@@ -1,5 +1,4 @@
 .section__header {
-    width: 60%;
     margin: 50px auto;
     height: 100px;
     h1:first-child {
@@ -15,5 +14,14 @@
     }
     a:hover {
         text-decoration: underline;
+    }
+}
+
+// media queries
+
+.section__header {
+    width: 90%;
+    @media (min-width: $break-medium) {
+        width: 750px;
     }
 }
