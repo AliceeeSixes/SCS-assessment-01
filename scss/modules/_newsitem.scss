@@ -138,9 +138,10 @@
 .news__container {
     flex-direction: column;
     width: 90%;
-    @media (min-width: $break-large) {
+    @media (min-width: $break-medium) {
         flex-direction: row;
         width: 930px;
+        justify-content: center;
     }
     @media (min-width: $break-xl) {
         width: 1200px;
@@ -150,9 +151,6 @@
 .news__item {
     width: 100%;
     @media (min-width: $break-medium) {
-        width: 450px;
-    }
-    @media (min-width: $break-large) {
         width: 370px;
     }
 }

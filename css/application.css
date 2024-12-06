@@ -1221,10 +1221,11 @@ a.social[href*="instagram"]:hover {
 .news__container {
   flex-direction: column;
   width: 90%; }
-  @media (min-width: 1200px) {
+  @media (min-width: 950px) {
     .news__container {
       flex-direction: row;
-      width: 930px; } }
+      width: 930px;
+      justify-content: center; } }
   @media (min-width: 1300px) {
     .news__container {
       width: 1200px; } }
@@ -1232,9 +1233,6 @@ a.social[href*="instagram"]:hover {
 .news__item {
   width: 100%; }
   @media (min-width: 950px) {
-    .news__item {
-      width: 450px; } }
-  @media (min-width: 1200px) {
     .news__item {
       width: 370px; } }
 
