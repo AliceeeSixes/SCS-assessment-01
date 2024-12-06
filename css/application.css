@@ -1029,6 +1029,7 @@ a.social[href*="instagram"]:hover {
     text-decoration: underline; }
 
 .news__container {
+  position: relative;
   margin: auto;
   padding-bottom: 80px;
   display: flex;
@@ -1038,6 +1039,7 @@ a.social[href*="instagram"]:hover {
   overflow: clip; }
 
 .news__item {
+  position: relative;
   box-shadow: 0 0 10px #323544;
   height: fit-content;
   padding: 0 0 20px;
@@ -1132,6 +1134,8 @@ a.social[href*="instagram"]:hover {
   text-align: center;
   font-size: .9em;
   font-weight: 700; }
+  .news__item--inset:hover {
+    text-decoration: underline; }
 
 .news__item--author-details {
   display: inline-block;
