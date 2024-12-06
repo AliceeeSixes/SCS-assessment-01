@@ -138,13 +138,12 @@
 .news__container {
     flex-direction: column;
     width: 90%;
-    @media (min-width: $break-medium) {
+    @media (min-width: $break-large) {
         flex-direction: row;
         width: 930px;
     }
-    @media (min-width: $break-large) {
-        width: 1150px;
-
+    @media (min-width: $break-xl) {
+        width: 1200px;
     }
 }
 

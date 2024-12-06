@@ -771,11 +771,11 @@ footer {
   grid-template-areas: "card-1" "card-2" "card-3" "card-4" "card-5" "card-6" "card-7"; }
   @media (min-width: 1200px) {
     #card__grid {
-      width: 750px;
+      width: 930px;
       grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-4 card-4 card-4 card-5 card-5 card-5 card-5 card-5 card-5" "card-6 card-6 card-6 card-6 card-6 card-6 card-7 card-7 card-7 card-7 card-7 card-7"; } }
   @media (min-width: 1300px) {
     #card__grid {
-      width: 900px;
+      width: 1200px;
       grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-5 card-5 card-5 card-6 card-6 card-6 card-7 card-7 card-7"; } }
 
 .card:nth-child(1) {
@@ -1086,7 +1086,10 @@ a.social[href*="instagram"]:hover {
   width: 90%; }
   @media (min-width: 950px) {
     .section__header {
-      width: 750px; } }
+      width: 930px; } }
+  @media (min-width: 1300px) {
+    .section__header {
+      width: 1200px; } }
 
 .news__container {
   position: relative;
@@ -1210,13 +1213,13 @@ a.social[href*="instagram"]:hover {
 .news__container {
   flex-direction: column;
   width: 90%; }
-  @media (min-width: 950px) {
+  @media (min-width: 1200px) {
     .news__container {
       flex-direction: row;
       width: 930px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1300px) {
     .news__container {
-      width: 1150px; } }
+      width: 1200px; } }
 
 .news__item {
   width: 100%; }
