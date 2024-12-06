@@ -69,5 +69,7 @@
     background: center no-repeat url("../img/carousel/home-MSxH.webp"), rgba(0,0,0,.5);
     @media (min-width: $break-medium) {
         background: center no-repeat url("../img/carousel/home-MSxH.webp"), linear-gradient(to right,black 0%, transparent 65%);
+        //property not displaying properly unless it is explicitly set within the media query
+        background-size: cover;
     }
 }
