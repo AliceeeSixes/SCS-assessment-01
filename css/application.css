@@ -386,7 +386,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center; }
-  @media (max-width: 920px) {
+  @media (max-width: 950px) {
     .topnav__container {
       display: none; } }
 
@@ -437,7 +437,7 @@ h2 {
     background: #a3a8ac; }
     .header__button:nth-of-type(3):hover {
       background: #888f94; }
-  @media (max-width: 920px) {
+  @media (max-width: 950px) {
     .header__button {
       display: none; } }
 
@@ -540,7 +540,7 @@ button.searchicon {
   width: 60%;
   margin: 0 auto;
   gap: 20px; }
-  @media (min-width: 920px) {
+  @media (min-width: 950px) {
     #client__grid {
       grid-auto-flow: column; } }
 
@@ -790,7 +790,7 @@ footer {
   border: none;
   color: white;
   height: fit-content; }
-  @media (min-width: 920px) {
+  @media (min-width: 950px) {
     .topnav__button {
       width: 110px; } }
   @media (min-width: 1200px) {
@@ -818,7 +818,7 @@ footer {
     border-color: #67809f transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(1):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -843,7 +843,7 @@ footer {
     border-color: #4d86d2 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(2):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -868,7 +868,7 @@ footer {
     border-color: #2ecc71 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(3):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -893,7 +893,7 @@ footer {
     border-color: #d54a4a transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(4):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -918,7 +918,7 @@ footer {
     border-color: #9971b2 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(5):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -943,7 +943,7 @@ footer {
     border-color: #f62459 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(6):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -968,7 +968,7 @@ footer {
     border-color: #d44223 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .topnav__button:nth-child(7):hover::after {
         border-width: 50px 55px 0 55px; } }
     @media (min-width: 1200px) {
@@ -1022,25 +1022,25 @@ a.social[href*="instagram"]:hover {
   .section__header h1:last-child {
     float: right;
     display: none; }
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
       .section__header h1:last-child {
         display: block; } }
   .section__header a:hover {
     text-decoration: underline; }
 
 .news__container {
-  width: 60%;
   margin: auto;
   padding-bottom: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  gap: 30px;
+  overflow: clip; }
 
 .news__item {
   box-shadow: 0 0 10px #323544;
   height: fit-content;
   padding: 0 0 20px;
-  width: 370px;
   display: inline-block;
   transition: 0.5s ease; }
   .news__item:hover {
@@ -1051,8 +1051,6 @@ a.social[href*="instagram"]:hover {
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3; }
-  .news__item img {
-    width: 100%; }
 
 .news__item:nth-child(1) .news__item--button {
   background: #2ecc71; }
@@ -1107,9 +1105,13 @@ a.social[href*="instagram"]:hover {
   flex-direction: row; }
 
 .news__item--image {
-  height: 210px;
+  display: block;
+  height: fit-content;
+  width: 100%;
   position: relative;
   flex: 0; }
+  .news__item--image img {
+    width: 100%; }
 
 .news__item--avatar {
   display: inline-block;
@@ -1140,5 +1142,32 @@ a.social[href*="instagram"]:hover {
     font-weight: 700;
     color: #323544;
     line-height: 1.5; }
+
+.news__container {
+  flex-direction: column;
+  width: 90%; }
+  @media (min-width: 950px) {
+    .news__container {
+      flex-direction: row;
+      width: 930px; } }
+  @media (min-width: 1200px) {
+    .news__container {
+      width: 1150px; } }
+
+.news__item {
+  width: 100%; }
+  @media (min-width: 950px) {
+    .news__item {
+      width: 450px; } }
+  @media (min-width: 1200px) {
+    .news__item {
+      width: 370px; } }
+
+@media (min-width: 700px) {
+  .news__item:nth-child(3) {
+    display: none; } }
+@media (min-width: 1200px) {
+  .news__item:nth-child(3) {
+    display: block; } }
 
 /*# sourceMappingURL=application.css.map */
