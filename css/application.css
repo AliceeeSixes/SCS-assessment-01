@@ -379,14 +379,6 @@ h2 {
   text-align: center;
   font-size: 1.3em; }
 
-div,
-header,
-footer,
-main,
-nav,
-aside {
-  border: 2px solid red; }
-
 #topnav {
   background: #323544; }
 
@@ -456,11 +448,10 @@ aside {
 
 .header__toggle-nav {
   background: #212330;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
-  max-height: 56px;
-  max-width: 56px;
-  flex: 1; }
+  height: 56px;
+  width: 56px; }
 
 form.searchbar {
   height: 56px;

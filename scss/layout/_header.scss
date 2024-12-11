@@ -55,11 +55,10 @@
 
 .header__toggle-nav {
     background: $dark-grey;
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
-    max-height: 56px;
-    max-width: 56px;
-    flex: 1;
+    height: 56px;
+    width: 56px;
 }
 
 form.searchbar {
