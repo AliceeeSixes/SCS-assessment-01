@@ -345,10 +345,15 @@ a {
     display: inline; }
   a.white {
     color: white; }
+  a.hover-underline:hover {
+    text-decoration: underline; }
 
 blockquote {
+  font-weight: 600;
+  line-height: 1.5;
   margin: 0; }
   blockquote p:first-child {
+    font-size: 1.4em;
     font-style: italic; }
   blockquote p:nth-child(2) {
     color: #a3a8ac; }
@@ -378,6 +383,9 @@ h2 {
   font-weight: 400;
   text-align: center;
   font-size: 1.3em; }
+
+.bold {
+  font-weight: 600; }
 
 #topnav {
   background: #323544; }
@@ -425,6 +433,12 @@ h2 {
     .header--inner * {
       margin-left: 10px;
       margin-right: 10px; } }
+  @media (min-width: 950px) {
+    .header--inner {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .header--inner {
+      width: 1200px; } }
 
 .header__button {
   padding-left: 10px;
@@ -603,6 +617,7 @@ button.searchicon {
 
 #client__grid {
   display: grid;
+  line-height: 2;
   grid-auto-columns: 1fr;
   margin: 0 auto;
   gap: 20px; }

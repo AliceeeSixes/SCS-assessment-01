@@ -61,14 +61,20 @@ a {
     &.white {
         color: white;
     }
+    &.hover-underline:hover {
+        text-decoration: underline;
+    }
 }
 
 blockquote {
-
+    font-weight: $font-weight--med-bold;
+    line-height: 1.5;
     margin: 0;
 
     & p:first-child {
+        font-size: 1.4em;
         font-style: italic;
+
     }
     & p:nth-child(2) {
         color: $light-grey;
@@ -106,4 +112,9 @@ h2 {
     font-weight: $font-weight--medium;
     text-align: center;
     font-size: 1.3em;
+}
+
+
+.bold {
+    font-weight: $font-weight--med-bold;
 }
