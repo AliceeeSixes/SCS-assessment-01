@@ -332,7 +332,8 @@ h3 {
 
 section {
   background: white;
-  color: #323544; }
+  color: #323544;
+  width: 100%; }
   section.dark {
     background: #323544;
     color: white; }
@@ -378,6 +379,14 @@ h2 {
   text-align: center;
   font-size: 1.3em; }
 
+div,
+header,
+footer,
+main,
+nav,
+aside {
+  border: 2px solid red; }
+
 #topnav {
   background: #323544; }
 
@@ -414,12 +423,16 @@ h2 {
   flex-direction: row;
   align-items: center;
   height: 100%;
-  width: 60%;
+  width: 100%;
   margin: auto;
   justify-content: center; }
   .header--inner * {
-    margin-left: 10px;
-    margin-right: 10px; }
+    margin-left: 5px;
+    margin-right: 5px; }
+  @media (min-width: 700px) {
+    .header--inner * {
+      margin-left: 10px;
+      margin-right: 10px; } }
 
 .header__button {
   padding-left: 10px;
@@ -445,8 +458,9 @@ h2 {
   background: #212330;
   padding: 5px;
   border-radius: 3px;
-  height: 56px;
-  width: 56px; }
+  max-height: 56px;
+  max-width: 56px;
+  flex: 1; }
 
 form.searchbar {
   height: 56px;
@@ -494,6 +508,15 @@ button.searchicon {
   height: 30px;
   width: 30px;
   filter: invert(100%); }
+
+#header__img {
+  flex: 1 1 0; }
+  #header__img img {
+    width: 100%;
+    height: auto; }
+  @media (min-width: 700px) {
+    #header__img img {
+      width: auto; } }
 
 .submenu {
   z-index: 1;
@@ -589,7 +612,7 @@ button.searchicon {
 
 #client__grid {
   display: grid;
-  grid-auto-columns: minmax(300px, 1fr);
+  grid-auto-columns: 1fr;
   margin: 0 auto;
   gap: 20px; }
 
@@ -598,9 +621,10 @@ button.searchicon {
   font-size: 3em; }
 
 #client__grid {
-  width: 60%; }
+  width: 95%; }
   @media (min-width: 950px) {
     #client__grid {
+      width: 60%;
       grid-auto-flow: column; } }
   @media (min-width: 1200px) {
     #client__grid {
@@ -608,6 +632,9 @@ button.searchicon {
   @media (min-width: 1300px) {
     #client__grid {
       width: 1200px; } }
+
+.client__column {
+  max-width: 100%; }
 
 footer {
   background: #323544;
@@ -621,7 +648,8 @@ footer {
 #footer__grid {
   display: grid;
   margin: 0 auto;
-  width: 60%; }
+  width: 100%;
+  justify-content: center; }
   @media (max-width: 700px) {
     #footer__grid {
       grid-template-columns: 100%;
@@ -630,6 +658,7 @@ footer {
       grid-auto-flow: row; } }
   @media (min-width: 700px) {
     #footer__grid {
+      width: 60%;
       grid-template-columns: 1fr 1fr;
       grid-auto-columns: minmax(100px, 50%);
       gap: auto; } }
@@ -639,6 +668,16 @@ footer {
 
 #footer__logo {
   margin: 20px auto; }
+  #footer__logo #socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+#footer__logo--img {
+  height: 50px; }
+  @media (min-width: 700px) {
+    #footer__logo--img {
+      height: 65px; } }
 
 #footer__about {
   margin: 20px auto; }

@@ -4,6 +4,8 @@
 
 }
 
+
+
 header {
     box-sizing: border-box;
     height: 110px;
@@ -40,6 +42,7 @@ h3 {
 section {
     background: white;
     color: $grey;
+    width: 100%;
 
     &.dark {
         background: $grey;

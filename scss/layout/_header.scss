@@ -9,13 +9,21 @@
     flex-direction: row;
     align-items: center;
     height: 100%;
-    width: 60%;
+    width: 100%;
+    & * {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @media (min-width: $break-small) {
+        
+        & * {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
     margin: auto;
     justify-content: center;
-    & * {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+
 }
 
 
@@ -49,8 +57,9 @@
     background: $dark-grey;
     padding: 5px;
     border-radius: 3px;
-    height: 56px;
-    width: 56px;
+    max-height: 56px;
+    max-width: 56px;
+    flex: 1;
 }
 
 form.searchbar {
@@ -105,4 +114,19 @@ button.searchicon {
     height: 30px;
     width: 30px;
     filter: invert(100%);
+}
+
+#header__img {
+    flex : 1 1 0;
+    img {
+        width: 100%;
+        height: auto;
+        
+    }
+    @media (min-width: $break-small) {
+        img {
+        width: auto;
+        }
+        
+    }
 }
