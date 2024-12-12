@@ -448,13 +448,13 @@ h2 {
   font-size: 1.2em;
   align-items: center;
   display: flex; }
-  .header__button:nth-of-type(2) {
-    background: #4d86d2; }
-    .header__button:nth-of-type(2):hover {
-      background: #306CBC; }
   .header__button:nth-of-type(3) {
-    background: #a3a8ac; }
+    background: #4d86d2; }
     .header__button:nth-of-type(3):hover {
+      background: #306CBC; }
+  .header__button:nth-of-type(4) {
+    background: #a3a8ac; }
+    .header__button:nth-of-type(4):hover {
       background: #888f94; }
   @media (max-width: 950px) {
     .header__button {

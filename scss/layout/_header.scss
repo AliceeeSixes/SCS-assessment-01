@@ -42,13 +42,13 @@
     font-size: 1.2em;
     align-items: center;
     display: flex;
-    &:nth-of-type(2) {
+    &:nth-of-type(3) {
         background: lighten($cerulean-blue, 10%);
         &:hover {
             background: $cerulean-blue;
         }
     }
-    &:nth-of-type(3) {
+    &:nth-of-type(4) {
         background: $light-grey;
         &:hover {
             background: darken($light-grey, 10%);
