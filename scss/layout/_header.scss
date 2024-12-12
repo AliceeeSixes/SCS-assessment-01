@@ -126,6 +126,8 @@ button.searchicon {
     img {
         width: 100%;
         height: auto;
+        max-height: 50px;
+        max-width: 290px;
         
     }
     @media (min-width: $break-small) {

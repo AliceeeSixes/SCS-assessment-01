@@ -21,6 +21,9 @@
 
 .section__header {
     width: 90%;
+    @media (min-width: $break-small) {
+        width: 750px;
+    }
     @media (min-width: $break-medium) {
         width: 930px;
     }
