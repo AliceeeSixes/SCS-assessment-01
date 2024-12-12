@@ -135,3 +135,9 @@ button.searchicon {
         
     }
 }
+
+.small-only {
+    @media (min-width: $break-medium) {
+        display: none;
+    }
+}

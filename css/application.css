@@ -523,6 +523,10 @@ button.searchicon {
     #header__img img {
       width: auto; } }
 
+@media (min-width: 950px) {
+  .small-only {
+    display: none; } }
+
 .submenu {
   z-index: 1;
   width: 100vw;
