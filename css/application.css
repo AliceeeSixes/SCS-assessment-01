@@ -731,7 +731,10 @@ footer {
   border-radius: 3px;
   padding: 10px;
   font-size: 1.3em;
-  color: white; }
+  color: white;
+  width: fit-content;
+  margin: auto;
+  bottom: 10px; }
 
 .card__icon {
   display: block;
