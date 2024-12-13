@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0 15px;
     height: 100%;
     width: 100%;
     & * {
@@ -41,7 +42,7 @@
     border-radius: 3px;
     font-size: 1.2em;
     align-items: center;
-    display: flex;
+    display: none;
     &:nth-of-type(3) {
         background: lighten($cerulean-blue, 10%);
         &:hover {
@@ -54,8 +55,8 @@
             background: darken($light-grey, 10%);
         }
     }
-    @media (max-width: $break-medium) {
-        display: none;
+    @media (min-width: $break-medium) {
+        display: flex;
     }
 }
 
@@ -67,29 +68,43 @@
     width: 56px;
 }
 
-form.searchbar {
+form.searchbar--desktop {
     height: 56px;
     margin: auto 0;
     padding: 0;
-    @media (max-width: $break-large) {
+    display: none;
+    & input[type="search"] {
+
+        display: inline;
+        height: 100%;
+        width: 200px;
+        border: 1px solid $light-grey;
+        border-radius: 0;
+        margin-right: 0;
+        color: $light-grey;
+        padding: 20px;
+        font-weight: $font-weight--light;
+        font-size: 0.9em;
+        box-shadow: inset 0 0 2px $light-grey;
+    }
+    @media (min-width: $break-small) {
+        display: block;
+    }
+    @media (min-width: $break-medium) {
         display: none;
+        + button {
+            border-radius: 5px;
+        }
+    }
+    @media (min-width: $break-large) {
+        display: block;
+        + button {
+            border-radius: 0 5px 5px 0;
+        }
     }
 }
 
-input[type="search"] {
 
-    display: inline;
-    height: 100%;
-    width: 200px;
-    border: 1px solid $light-grey;
-    border-radius: 0;
-    margin-right: 0;
-    color: $light-grey;
-    padding: 20px;
-    font-weight: $font-weight--light;
-    font-size: 0.9em;
-    box-shadow: inset 0 0 2px $light-grey;
-}
 
 button.searchicon {
     display: inline-block;
@@ -101,17 +116,14 @@ button.searchicon {
     &:hover {
         background: darken($light-grey, 10%);
     }
-    @media (max-width: $break-large) {
-        display: none;
+    @media (min-width: $break-small) {
+        display: block;
     }
 }
 
 .searchicon img {
     margin: auto;
     filter: invert(100%);
-    @media (max-width: $break-large) {
-        display: none;
-    }
 }
 
 .icon {
