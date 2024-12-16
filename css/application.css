@@ -454,7 +454,8 @@ header * {
   border-radius: 3px;
   font-size: 1.2em;
   align-items: center;
-  display: none; }
+  display: none;
+  color: white; }
   .header__button:nth-of-type(3) {
     background: #4d86d2; }
     .header__button:nth-of-type(3):hover {
