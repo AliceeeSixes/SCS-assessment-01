@@ -85,7 +85,7 @@
     "card-1" "card-2" "card-3" "card-4" "card-5" "card-6" "card-7";
 
 
-    @media (min-width: $break-large) {
+    @media (min-width: $break-medium) {
         width: 930px;
         grid-template-areas:
         "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3"
@@ -103,7 +103,7 @@
 @for $i from 1 through 7 {
     .card:nth-child(#{$i}) {
         grid-area: card-#{$i};
-        @media (max-width: $break-large) {
+        @media (max-width: $break-medium) {
             grid-column: span 12;
         }
     }

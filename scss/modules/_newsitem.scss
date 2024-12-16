@@ -6,10 +6,11 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 30px;
-    overflow: clip;
+    overflow: visible;
 }
 
 .news__item {
+    z-index: 1;
     position: relative;
     box-shadow: 0 0 10px $grey;
     height: fit-content;

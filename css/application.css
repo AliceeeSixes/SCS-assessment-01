@@ -888,7 +888,7 @@ footer {
   grid-auto-rows: auto;
   gap: 20px;
   grid-template-areas: "card-1" "card-2" "card-3" "card-4" "card-5" "card-6" "card-7"; }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     #card__grid {
       width: 930px;
       grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-4 card-4 card-4 card-5 card-5 card-5 card-5 card-5 card-5" "card-6 card-6 card-6 card-6 card-6 card-6 card-7 card-7 card-7 card-7 card-7 card-7"; } }
@@ -899,43 +899,43 @@ footer {
 
 .card:nth-child(1) {
   grid-area: card-1; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(1) {
       grid-column: span 12; } }
 
 .card:nth-child(2) {
   grid-area: card-2; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(2) {
       grid-column: span 12; } }
 
 .card:nth-child(3) {
   grid-area: card-3; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(3) {
       grid-column: span 12; } }
 
 .card:nth-child(4) {
   grid-area: card-4; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(4) {
       grid-column: span 12; } }
 
 .card:nth-child(5) {
   grid-area: card-5; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(5) {
       grid-column: span 12; } }
 
 .card:nth-child(6) {
   grid-area: card-6; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(6) {
       grid-column: span 12; } }
 
 .card:nth-child(7) {
   grid-area: card-7; }
-  @media (max-width: 1200px) {
+  @media (max-width: 992px) {
     .card:nth-child(7) {
       grid-column: span 12; } }
 
@@ -1188,18 +1188,24 @@ a.social[href*="instagram"]:hover {
 
 .section__header {
   margin: 50px auto;
-  height: 100px; }
+  height: 100px;
+  background: transparent; }
   .section__header h1:first-child {
     float: left;
     font-weight: 400; }
   .section__header h1:last-child {
     float: right;
     display: none; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       .section__header h1:last-child {
         display: block; } }
   .section__header a:hover {
     text-decoration: underline; }
+
+.section__footer {
+  margin: 50px auto;
+  height: 100px;
+  text-align: center; }
 
 .section__header {
   width: 90%; }
@@ -1213,6 +1219,10 @@ a.social[href*="instagram"]:hover {
     .section__header {
       width: 1200px; } }
 
+@media (min-width: 768px) {
+  .section__footer {
+    display: none; } }
+
 .news__container {
   position: relative;
   margin: auto;
@@ -1221,9 +1231,10 @@ a.social[href*="instagram"]:hover {
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
-  overflow: clip; }
+  overflow: visible; }
 
 .news__item {
+  z-index: 1;
   position: relative;
   box-shadow: 0 0 10px #323544;
   height: fit-content;

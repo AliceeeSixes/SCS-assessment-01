@@ -1,6 +1,7 @@
 .section__header {
     margin: 50px auto;
     height: 100px;
+    background: transparent;
     h1:first-child {
         float: left;
         font-weight: $font-weight--medium;
@@ -8,13 +9,20 @@
     h1:last-child {
         float: right;
         display: none;
-        @media (min-width: $break-medium) {
+        @media (min-width: $break-small) {
             display: block;
         }
     }
     a:hover {
         text-decoration: underline;
     }
+}
+
+
+.section__footer {
+    margin: 50px auto;
+    height: 100px;
+    text-align: center;
 }
 
 // media queries
@@ -29,5 +37,11 @@
     }
     @media (min-width: $break-xl) {
         width: 1200px;
+    }
+}
+
+.section__footer {
+    @media (min-width: $break-small) {
+        display: none;
     }
 }
