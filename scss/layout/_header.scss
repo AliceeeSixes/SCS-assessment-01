@@ -1,3 +1,19 @@
+header {
+    box-sizing: border-box;
+    height: 168px;
+    @media (min-width: $break-small) {
+        height: 110px;
+    }
+}
+
+
+header * {
+    display: inline-block;
+
+
+}
+
+
 .header__toggle-nav {
     height: 50px;
     width: 50px;
@@ -7,6 +23,7 @@
 .header--inner {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 15px;
     height: 100%;
@@ -16,7 +33,7 @@
         margin-right: 5px;
     }
     @media (min-width: $break-small) {
-        
+        flex-wrap: nowrap;
         & * {
             margin-left: 10px;
             margin-right: 10px;
@@ -107,8 +124,9 @@ form.searchbar--desktop {
 
 
 button.searchicon {
-    display: inline-block;
+    display: none;
     margin: auto 0;
+    padding: 10px;
     height: 56px;
     width: 56px;
     background: $light-grey;
@@ -118,6 +136,17 @@ button.searchicon {
     }
     @media (min-width: $break-small) {
         display: block;
+    }
+}
+
+button.searchicon--mobile {
+    display: block;
+    background: transparent;
+    height: 56px;
+    width: 56px;
+    border-radius: 0 3px 3px 0;
+    @media (min-width: $break-small) {
+        display: none;
     }
 }
 
@@ -152,6 +181,41 @@ button.searchicon {
 
 .small-only {
     @media (min-width: $break-medium) {
+        display: none;
+    }
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+form.searchbar--mobile {
+    display: flex;
+    width: 95%;
+    height: 56px;
+    margin: auto 0;
+    padding: 0;
+    border: 1px solid $light-grey;
+    color: $light-grey;
+    background: $pale-grey;
+    border-radius: 0;
+    box-shadow: inset 0 0 2px $light-grey;
+    align-content: center;
+    
+    & input[type="search"] {
+        display: inline;
+        height: 100%;
+        width: calc(100% - 56px);
+        margin-right: 0;
+        padding: 20px;
+        font-weight: $font-weight--light;
+        font-size: 0.9em;
+        border: none;
+        background: transparent;
+
+    }
+    @media (min-width: $break-small) {
         display: none;
     }
 }

@@ -6,17 +6,7 @@
 
 
 
-header {
-    box-sizing: border-box;
-    height: 110px;
-}
 
-
-header * {
-    display: inline-block;
-
-
-}
 
 
 
@@ -99,8 +89,8 @@ ul {
 
 button {
     border: none;
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
     display: inline-block;
 }
 
