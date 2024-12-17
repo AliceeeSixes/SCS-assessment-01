@@ -369,6 +369,11 @@ button {
 .bold {
   font-weight: 600; }
 
+i {
+  width: 20px;
+  margin: 10px;
+  text-align: center; }
+
 #topnav {
   background: #323544; }
 
@@ -578,20 +583,20 @@ button.searchicon--mobile {
   .submenu a:hover {
     text-decoration: underline; }
   .submenu h3 {
-    width: 1000px;
+    width: 1200px;
     margin: 60px auto;
     font-size: 2.3em;
     font-weight: 600; }
 
 .submenu__grid {
-  width: 1000px;
+  width: 1200px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 50px;
   gap: 10px; }
   .submenu__grid li {
-    width: 90%;
+    width: 100%;
     font-size: 1.2em; }
 
 .carousel {
