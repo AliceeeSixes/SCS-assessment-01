@@ -56,10 +56,10 @@
                 filter: none;
             }
             &::after {
+                z-index: 2;
                 content: "";
                 border-style: solid;
                 border-color: lighten($colour, 10%) transparent transparent transparent;
-                transform: rotate(0deg);
                 position: absolute;
                 @media (min-width: $break-medium) {
                     border-width: 50px 55px 0 55px;
@@ -79,6 +79,7 @@
         & img {
             // change logo colours to match label styling
             filter: opacity(0.5) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour});
+
         }
     }
 }

@@ -9,24 +9,23 @@
 
 .carousel__text {
     position: relative;
-
+    color: white;
     margin: auto;
     h1 {
         margin: 0;
-        color: white;
         font-size: 4em;
         font-weight: $font-weight--med-bold;
     }
     p {
-        color: white;
         font-size: 1.5em;
         width: 50%;
         font-weight: $font-weight--med-bold;
         padding: 20px 0;
     }
     a {
-        color: white;
+        color: inherit;
     }
+
 }
 
 .carousel__button {

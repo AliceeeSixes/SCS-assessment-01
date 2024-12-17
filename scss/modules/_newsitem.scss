@@ -33,15 +33,13 @@
 // Assign colours to news items
 @each $index, $colour in $news--colours {
     .news__item:nth-child(#{$index}) {
-        .news__item--button {
+        .news__item--button,
+        .news__item--inset {
             background: $colour;
         }
         h3 {
             color: $colour;
 
-        }
-        .news__item--inset {
-            background: $colour;
         }
     }
 }

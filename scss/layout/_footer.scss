@@ -57,21 +57,13 @@ footer {
     }
 }
 
-#footer__about {
-    margin: 20px auto;
-}
-
-#footer__services {
-    margin: 20px auto;
-}
-
-#footer__industries {
-    margin: 20px auto;
-}
-
+#footer__about,
+#footer__services,
+#footer__industries,
 #footer__locations {
     margin: 20px auto;
 }
+
 
 #footer__bottom {
     background: $dark_grey;

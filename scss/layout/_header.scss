@@ -9,23 +9,16 @@ header {
 
 header * {
     display: inline-block;
-
-
 }
 
 
-.header__toggle-nav {
-    height: 50px;
-    width: 50px;
-
-}
 
 .header--inner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 5px;
     height: 100%;
     width: 100%;
     & * {
@@ -33,6 +26,7 @@ header * {
         margin-right: 5px;
     }
     @media (min-width: $break-small) {
+        padding: 0 15px;
         flex-wrap: nowrap;
         & * {
             margin-left: 10px;
@@ -50,7 +44,7 @@ header * {
 
 }
 
-
+// Support/contact buttons
 
 .header__button {
     padding-left: 10px;
@@ -78,7 +72,10 @@ header * {
     }
 }
 
-.header__toggle-nav {
+// Square buttons
+
+.header__toggle-nav,
+.header__tel {
     background: $dark-grey;
     padding: 10px;
     border-radius: 3px;
@@ -86,20 +83,34 @@ header * {
     width: 56px;
 }
 
-form.searchbar--desktop {
-    height: 56px;
-    margin: auto 0;
-    padding: 0;
-    display: none;
-    & input[type="search"] {
+.header__tel {
+    @media (min-width: $break-small) {
+        display: none;
+    }
+}
 
+
+// Searchbars + search buttons
+
+form[class*="searchbar"] {
+    padding: 0;
+    margin: auto 0;
+    height: 56px;
+    color: $light-grey;
+    & input[type="search"] {
         display: inline;
         height: 100%;
+    }
+}
+
+
+form.searchbar--desktop {
+    display: none;
+    & input[type="search"] {
         width: 200px;
         border: 1px solid $light-grey;
         border-radius: 0;
         margin-right: 0;
-        color: $light-grey;
         padding: 20px;
         font-weight: $font-weight--light;
         font-size: 0.9em;
@@ -122,16 +133,41 @@ form.searchbar--desktop {
     }
 }
 
+form.searchbar--mobile {
+    display: flex;
+    width: 95%;
+    border: 1px solid $light-grey;
+    background: $pale-grey;
+    border-radius: 0;
+    box-shadow: inset 0 0 2px $light-grey;
+    align-content: center;
+    
+    & input[type="search"] {
+        width: calc(100% - 56px);
+        margin-right: 0;
+        padding: 20px;
+        font-weight: $font-weight--light;
+        font-size: 0.9em;
+        border: none;
+        background: transparent;
 
+    }
+    @media (min-width: $break-small) {
+        display: none;
+    }
+}
+
+button[class*="searchicon"] {
+    height: 56px;
+    width: 56px;
+    border-radius: 0 3px 3px 0;
+}
 
 button.searchicon {
     display: none;
     margin: auto 0;
     padding: 10px;
-    height: 56px;
-    width: 56px;
     background: $light-grey;
-    border-radius: 0 3px 3px 0;
     &:hover {
         background: darken($light-grey, 10%);
     }
@@ -143,9 +179,6 @@ button.searchicon {
 button.searchicon--mobile {
     display: block;
     background: transparent;
-    height: 56px;
-    width: 56px;
-    border-radius: 0 3px 3px 0;
     @media (min-width: $break-small) {
         display: none;
     }
@@ -180,43 +213,9 @@ button.searchicon--mobile {
     }
 }
 
-.small-only {
-    @media (min-width: $break-medium) {
-        display: none;
-    }
-}
 
+// break divider to make mobile searchbar go on its own line properly
 .break {
     flex-basis: 100%;
     height: 0;
-}
-
-form.searchbar--mobile {
-    display: flex;
-    width: 95%;
-    height: 56px;
-    margin: auto 0;
-    padding: 0;
-    border: 1px solid $light-grey;
-    color: $light-grey;
-    background: $pale-grey;
-    border-radius: 0;
-    box-shadow: inset 0 0 2px $light-grey;
-    align-content: center;
-    
-    & input[type="search"] {
-        display: inline;
-        height: 100%;
-        width: calc(100% - 56px);
-        margin-right: 0;
-        padding: 20px;
-        font-weight: $font-weight--light;
-        font-size: 0.9em;
-        border: none;
-        background: transparent;
-
-    }
-    @media (min-width: $break-small) {
-        display: none;
-    }
 }
