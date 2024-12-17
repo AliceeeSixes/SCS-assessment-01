@@ -31,9 +31,10 @@
     border-radius: 50%;
     margin: 0 auto;
     padding: 15px;
-    & img {
-        height: 35px;
-        width: 35px;
+    i {
+        color: white;
+        margin: auto;
+        align-content: center;
     }
 }
 
@@ -53,8 +54,8 @@
             & .card__icon {
                 background: white;
                 color: lighten($colour, 10%);
-                & img {
-                    filter: opacity(0.5) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour});
+                i {
+                    color: lighten($colour, 10%);
                 }
             }
         }

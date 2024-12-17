@@ -27,6 +27,7 @@
     border: none;
     color: white;
     height: fit-content;
+    padding-top: 20px;
     @media (min-width: $break-medium) {
         width: 110px;
     }
@@ -37,6 +38,7 @@
         width: 150px;
     }
     & h4 {
+        padding-top: 10px;
         text-transform: uppercase;
         text-align: center;
         margin: auto;
@@ -52,8 +54,8 @@
     .topnav__button:nth-child(#{$button}) {
         &:hover{
             background-color: lighten($colour, 10%);
-            & img {
-                filter: none;
+            i {
+                color: white;
             }
             &::after {
                 z-index: 2;
@@ -76,9 +78,9 @@
                 background: $colour;
             }
         }
-        & img {
+        i {
             // change logo colours to match label styling
-            filter: opacity(0.5) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour}) drop-shadow(0 0 0 #{$colour});
+            color: lighten($colour, 10%);
 
         }
     }
