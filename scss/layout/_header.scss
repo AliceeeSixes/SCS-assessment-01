@@ -27,7 +27,6 @@ header * {
     }
     @media (min-width: $break-small) {
         padding: 0 15px;
-        flex-wrap: nowrap;
         & * {
             margin-left: 10px;
             margin-right: 10px;
@@ -39,7 +38,7 @@ header * {
     @media (min-width: $break-large) {
         width: 1200px;
     }
-    margin: auto;
+    margin: 20px auto 0;
     justify-content: center;
 
 }
@@ -75,15 +74,19 @@ header * {
 // Square buttons
 
 .header__toggle-nav,
-.header__tel {
+#header__tel {
     background: $dark-grey;
     padding: 10px;
     border-radius: 3px;
     height: 56px;
     width: 56px;
+    text-align: center;
+    color: white;
+    align-content: center;
+    font-size: 2em;
 }
 
-.header__tel {
+#header__tel {
     @media (min-width: $break-small) {
         display: none;
     }
@@ -114,6 +117,7 @@ form.searchbar--desktop {
         padding: 20px;
         font-weight: $font-weight--light;
         font-size: 0.9em;
+        box-shadow: inset 0 0 2px $light-grey;
         &:focus {
             box-shadow: inset 0 0 2px $light-grey, 0 0 5px 1px #5bc0de;
         }
@@ -152,10 +156,6 @@ form.searchbar--mobile {
         font-size: 0.9em;
         border: none;
         background: transparent;
-        &:focus {
-            box-shadow: inset 0 0 2px $light-grey, 0 0 10px #5bc0de;
-        }
-
     }
     @media (min-width: $break-small) {
         display: none;
@@ -170,21 +170,28 @@ button[class*="searchicon"] {
 
 input[type="search"] {
     outline: none;
-    box-shadow: inset 0 0 2px $light-grey;
     transition: box-shadow 0.3s ease;
 }
 
 
 button.searchicon {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
     display: none;
     margin: auto 0;
-    padding: 10px;
     background: $light-grey;
+    color: white;
+    font-size: 1.5em;
     &:hover {
         background: darken($light-grey, 10%);
     }
     @media (min-width: $break-small) {
         display: block;
+    }
+    i {
+        width: 100%;
+        margin: auto 0;
     }
 }
 

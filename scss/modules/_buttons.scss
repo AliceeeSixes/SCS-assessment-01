@@ -29,13 +29,10 @@
     height: fit-content;
     padding-top: 20px;
     @media (min-width: $break-medium) {
-        width: 110px;
-    }
-    @media (min-width: $break-large) {
         width: 130px;
     }
-    @media (min-width: $break-xl) {
-        width: 150px;
+    @media (min-width: $break-large) {
+        width: 170px;
     }
     & h4 {
         padding-top: 10px;
@@ -64,13 +61,10 @@
                 border-color: lighten($colour, 10%) transparent transparent transparent;
                 position: absolute;
                 @media (min-width: $break-medium) {
-                    border-width: 50px 55px 0 55px;
+                    border-width: 35px 65px 0 65px;
                 }
                 @media (min-width: $break-large) {
-                    border-width: 50px 65px 0 65px;
-                }
-                @media (min-width: $break-xl) {
-                    border-width: 50px 75px 0 75px;
+                    border-width: 35px 85px 0 85px;
                 }
             }
             & .submenu {
