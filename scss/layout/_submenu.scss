@@ -1,6 +1,6 @@
 .submenu {
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     position: absolute;
     display: none;
@@ -9,7 +9,6 @@
         text-decoration: underline;
     }
     h3 {
-        width: 1200px;
         margin: 60px auto;
         font-size: 2.3em;
         font-weight: $font-weight--med-bold;
@@ -17,7 +16,6 @@
 }
 
 .submenu__grid {
-    width: 1200px;
     margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -28,4 +26,16 @@
         font-size: 1.2em;
     }
 
+}
+
+// Media queries
+
+.submenu h3,
+.submenu__grid {
+    @media (min-width: $break-medium) {
+        width: 970px;
+    }
+    @media (min-width: $break-xl) {
+        width: 1200px;
+    }
 }

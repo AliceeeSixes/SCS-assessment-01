@@ -114,7 +114,9 @@ form.searchbar--desktop {
         padding: 20px;
         font-weight: $font-weight--light;
         font-size: 0.9em;
-        box-shadow: inset 0 0 2px $light-grey;
+        &:focus {
+            box-shadow: inset 0 0 2px $light-grey, 0 0 5px 1px #5bc0de;
+        }
     }
     @media (min-width: $break-small) {
         display: block;
@@ -133,6 +135,7 @@ form.searchbar--desktop {
     }
 }
 
+
 form.searchbar--mobile {
     display: flex;
     width: 95%;
@@ -140,8 +143,7 @@ form.searchbar--mobile {
     background: $pale-grey;
     border-radius: 0;
     box-shadow: inset 0 0 2px $light-grey;
-    align-content: center;
-    
+    align-content: center;    
     & input[type="search"] {
         width: calc(100% - 56px);
         margin-right: 0;
@@ -150,6 +152,9 @@ form.searchbar--mobile {
         font-size: 0.9em;
         border: none;
         background: transparent;
+        &:focus {
+            box-shadow: inset 0 0 2px $light-grey, 0 0 10px #5bc0de;
+        }
 
     }
     @media (min-width: $break-small) {
@@ -162,6 +167,13 @@ button[class*="searchicon"] {
     width: 56px;
     border-radius: 0 3px 3px 0;
 }
+
+input[type="search"] {
+    outline: none;
+    box-shadow: inset 0 0 2px $light-grey;
+    transition: box-shadow 0.3s ease;
+}
+
 
 button.searchicon {
     display: none;
