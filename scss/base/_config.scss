@@ -1,5 +1,7 @@
 $break-small  : 768px;
 $break-medium : 992px;
+// $break-medium-2 Required for max-width expression to work properly
+$break-medium-2 : 993px;
 $break-large  : 1220px;
 $break-xl     : 1300px;
 $break-xxl    : 1950px;
