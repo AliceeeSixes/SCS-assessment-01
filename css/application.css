@@ -890,43 +890,43 @@ footer {
 
 .card:nth-child(1) {
   grid-area: card-1; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(1) {
       grid-column: span 12; } }
 
 .card:nth-child(2) {
   grid-area: card-2; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(2) {
       grid-column: span 12; } }
 
 .card:nth-child(3) {
   grid-area: card-3; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(3) {
       grid-column: span 12; } }
 
 .card:nth-child(4) {
   grid-area: card-4; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(4) {
       grid-column: span 12; } }
 
 .card:nth-child(5) {
   grid-area: card-5; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(5) {
       grid-column: span 12; } }
 
 .card:nth-child(6) {
   grid-area: card-6; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(6) {
       grid-column: span 12; } }
 
 .card:nth-child(7) {
   grid-area: card-7; }
-  @media (max-width: 993px) {
+  @media (max-width: 991px) {
     .card:nth-child(7) {
       grid-column: span 12; } }
 
