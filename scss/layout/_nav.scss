@@ -17,7 +17,8 @@
 
 // Side navbar (will be enabled using javascript)
 #sidenav {
-    display: none;
+    width: 275px;
+    background: red;
     transition: 0.3s ease;
 
 
@@ -47,4 +48,6 @@
     }
 }
 
-
+.showSideNav {
+    transform: translate(-275px, 0);
+}
