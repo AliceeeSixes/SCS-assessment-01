@@ -4,6 +4,9 @@ header {
     @media (min-width: $break-small) {
         height: 110px;
     }
+    position: relative;
+    z-index: 2;
+    background: white;
 }
 
 
@@ -263,4 +266,13 @@ button.searchicon--mobile {
         top: 0;
         transition: 0.3s ease;
         }
+}
+
+
+
+#top-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    transition: 0.3s ease;
 }

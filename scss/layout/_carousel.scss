@@ -133,16 +133,16 @@ $carousel--buttons : (
 
     li {
         display: inline-block;
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         border-radius: 50%;
-        padding: 3px;
+        padding: 4px;
         box-sizing: content-box;
 
         button{  
             border-radius: 50%;
-            height: 12px;
-            width: 12px;
+            height: 11px;
+            width: 11px;
             background: rgba(255, 255, 255,0.5);
             color: transparent;
             &:hover {

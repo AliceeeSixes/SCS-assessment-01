@@ -25,3 +25,35 @@ $(".slick").slick({
     appendDots: ".dotcontainer"
 
 })
+
+
+// Sticky/unsticky header/nav
+
+stickyNav = function () {
+    $("#top-sticky").css("top","0")
+}
+
+unstickyNav = function () {
+    $("#top-sticky").css("top","-100%")
+}
+
+
+
+// Detect scroll direction
+
+let position = $(window).scrollTop();
+ 
+$(window).scroll(function() {
+    let scroll = $(window).scrollTop();
+    if (scroll > position) {
+        unstickyNav();
+        
+    } else {
+        stickyNav();
+
+    }
+    position = scroll;
+});
+
+
+
