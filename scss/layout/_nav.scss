@@ -17,19 +17,38 @@
 
 // Side navbar (will be enabled using javascript)
 #sidenav {
-    width: 275px;
+    width: 350px;
     background: red;
     transition: 0.3s ease;
+    height: 100vh;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    padding: 0;
 
 
+}
 
-    &.is-enabled {
-        display: block;
-        width: 100px;
-        background: orange;
-        height: 100vh;
+ul.sidenav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+    color: white;
+    li {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: fit-content;
+        color: white;
+        &:hover {
+            background: lighten(#40444c, 10%);
+        }
     }
-
 
 }
 
@@ -49,5 +68,117 @@
 }
 
 .showSideNav {
-    transform: translate(-275px, 0);
+    transform: translate(-350px, 0);
+}
+
+
+
+.sidenav-header {
+    height: 56px;
+    background: #333645;
+    border-top: 1px solid lighten(#333645, 10%);
+    border-bottom: 1px solid darken(#333645, 10%);
+    padding-left: 10px;
+}
+
+.sidenav-button {
+    height: 51px;
+    position: relative;
+    background: #282c34;
+    border-top: 1px solid lighten(#282c34, 10%);
+    border-bottom: 1px solid darken(#282c34, 10%);
+    padding-left: 45px;
+    padding-right: 15px;
+    &::after {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        content: "\00BB";
+        display: block;
+        height: 100%;
+        align-content: center;
+    }
+}
+
+.sidenav-header,
+.sidenav-button {
+    display: block;
+    align-content: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.hide-mobile {
+    display: none;
+    @media (min-width: $break-medium) {
+        display: block;
+    }
+
+}
+
+.hide-desktop {
+    @media (min-width: $break-medium) {
+        display: none;
+    }
+}
+
+
+.sidenav-mobile {
+    background: #333645;
+    .sidenav-button {
+        text-align: center;
+        padding: 10px 5px;
+        height: fit-content;
+        &::after {
+            display: none;
+        }
+    }
+    .sidenav-mobile-container {
+        border-radius: 5px;
+        width: 233px;
+        margin: auto;
+        margin-bottom: 20px;
+        display: block;
+        overflow: hidden;
+    }
+    .sidenav-mobile-button {
+        display: block;
+        width: 233px;
+        height: 113px;
+        margin: 20px auto;
+        border: 1px solid lighten(#333645, 10%);
+        outline: 1px solid darken(#333645, 10%);
+        cursor: pointer;
+        h2,
+        span,
+        h4 {
+            margin: auto;
+            display: block;
+            width: fit-content;
+            text-transform: uppercase;
+        }
+        h4 {
+            margin-top: 10px;
+            font-size: .8em;
+        }
+        span {
+            font-size: 1.2em;
+        }
+
+        align-content: center;
+        border-radius: 5px;
+
+        &:hover {
+            background: lighten(#333645, 10%);
+        }
+    }
+}
+
+@each $button, $colour in $button--colours {
+    .sidenav-mobile-button:nth-of-type(#{$button}) {
+        span {
+            color: $colour;
+        }
+    }
 }

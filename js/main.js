@@ -1,16 +1,38 @@
 console.log("main.js loaded")
+let sideToggle = false;
+
+
+// Sidenav functions
+
+enableSideNav = function () {
+    $("body").addClass("showSideNav");
+    $("#toggleSideNav").addClass("modal");
+    let sideToggle = true;
+}
+
+disableSideNav = function () {
+    $("body").removeClass("showSideNav");
+    $("#toggleSideNav").removeClass("modal");
+    let sideToggle = false;
+}
 
 
 
 function toggleSideNav() {
-    $("body").toggleClass("showSideNav");
-    $("#toggleSideNav").toggleClass("modal");
+    if (sideToggle) {
+        disableSideNav();
+    } else {
+        enableSideNav();
+    }
+    sideToggle = ! (sideToggle);
     console.log("Side Navbar Toggled");
 }
 
 
 
 $("#toggleSideNav").on("click", () => toggleSideNav())
+
+disableSideNav();
 
 
 // Carousel
