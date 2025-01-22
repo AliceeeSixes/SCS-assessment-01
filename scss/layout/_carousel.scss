@@ -1,4 +1,10 @@
-.carousel {
+.slick {
+    width: 100%;
+    position: relative;
+    height: 550px;
+}
+
+.carousel__slide {
     background-blend-mode: multiply;
     background-size: cover;
     width: 100%;
@@ -46,6 +52,7 @@
 .carousel__text {
     width: 80%;
     text-align: center;
+    position: relative;
     p, .carousel__button {
         margin: auto;
     }
@@ -66,11 +73,93 @@
 
 // Responsive background change to make text readable at smaller sizes
 
-.carousel {
-    background: center no-repeat url("../img/carousel/home-MSxH.webp"), rgba(0,0,0,.5);
-    @media (min-width: $break-medium) {
-        background: center no-repeat url("../img/carousel/home-MSxH.webp"), linear-gradient(to right,black 0%, transparent 65%);
-        //property not displaying properly unless it is explicitly set within the media query
-        background-size: cover;
+$carousel--images : (
+    "00" : "../img/carousel/leading-company.webp",
+    "01" : "../img/carousel/bespoke-software.webp",
+    "02" : "../img/carousel/it-support.webp",
+    "03" : "../img/carousel/digital-marketing.webp",
+    "04" : "../img/carousel/telecoms-services.webp",
+    "05" : "../img/carousel/web-design.webp",
+    "06" : "../img/carousel/cyber-security.webp",
+);
+
+@each $slide, $link in $carousel--images {
+    #slick-slide#{$slide} {
+        background: center no-repeat url($link), rgba(0,0,0,.5);
+        @media (min-width: $break-medium) {
+            background: center no-repeat url($link), linear-gradient(to right,black 0%, transparent 65%);
+            //property not displaying properly unless it is explicitly set within the media query
+            background-size: cover;
+        }
+    }
+}
+
+// Button colouring
+
+$carousel--buttons : (
+    "00" : #926fb1,
+    "01" : $blue-bayoux,
+    "02" : $cerulean-blue,
+    "03" : $eucalyptus,
+    "04" : $tall-poppy,
+    "05" : $affair,
+    "06" : $red-ribbon,
+
+);
+
+@each $slide, $colour in $carousel--buttons {
+    #slick-slide#{$slide} {
+        .carousel__button {
+            background: $colour;
+        }
+    }
+}
+
+
+
+
+
+.dotcontainer {
+    width: 100%;
+    position: relative;
+    bottom: 50px;
+    user-select: none;
+}
+.dot {
+    width: 250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        padding: 3px;
+        box-sizing: content-box;
+
+        button{  
+            border-radius: 50%;
+            height: 12px;
+            width: 12px;
+            background: rgba(255, 255, 255,0.5);
+            color: transparent;
+            &:hover {
+                background: #869791;
+            }
+        }
+
+    }
+}
+
+
+li.slick-active {
+    border: 2px solid white;
+    button {
+        background: white;
+        &:hover {
+            background: white;
+        }
     }
 }
