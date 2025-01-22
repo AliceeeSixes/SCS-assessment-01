@@ -90,6 +90,7 @@ $carousel--images : (
             background: center no-repeat url($link), linear-gradient(to right,black 0%, transparent 65%);
             //property not displaying properly unless it is explicitly set within the media query
             background-size: cover;
+            background-position: center;
         }
     }
 }

@@ -546,6 +546,21 @@ ul.sidenav-list {
 .sidenav-mobile-button:nth-of-type(7) span {
   color: #A8341C; }
 
+.sidenav-mobile-contact {
+  margin: 20px auto;
+  display: block;
+  width: 233px;
+  height: fit-content;
+  padding: 5px;
+  border: 1px solid #494d62;
+  outline: 1px solid #1d1f28;
+  cursor: pointer;
+  align-content: center;
+  border-radius: 5px;
+  text-transform: uppercase; }
+  .sidenav-mobile-contact:hover {
+    background: #494d62; }
+
 header {
   box-sizing: border-box;
   height: 168px;
@@ -859,49 +874,56 @@ button.searchicon--mobile {
   @media (min-width: 992px) {
     #slick-slide00 {
       background: center no-repeat url("../img/carousel/leading-company.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide01 {
   background: center no-repeat url("../img/carousel/bespoke-software.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide01 {
       background: center no-repeat url("../img/carousel/bespoke-software.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide02 {
   background: center no-repeat url("../img/carousel/it-support.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide02 {
       background: center no-repeat url("../img/carousel/it-support.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide03 {
   background: center no-repeat url("../img/carousel/digital-marketing.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide03 {
       background: center no-repeat url("../img/carousel/digital-marketing.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide04 {
   background: center no-repeat url("../img/carousel/telecoms-services.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide04 {
       background: center no-repeat url("../img/carousel/telecoms-services.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide05 {
   background: center no-repeat url("../img/carousel/web-design.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide05 {
       background: center no-repeat url("../img/carousel/web-design.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide06 {
   background: center no-repeat url("../img/carousel/cyber-security.webp"), rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
     #slick-slide06 {
       background: center no-repeat url("../img/carousel/cyber-security.webp"), linear-gradient(to right, black 0%, transparent 65%);
-      background-size: cover; } }
+      background-size: cover;
+      background-position: center; } }
 
 #slick-slide00 .carousel__button {
   background: #926fb1; }
