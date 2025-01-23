@@ -45,8 +45,8 @@ ul.sidenav-list {
         flex-direction: column;
         height: fit-content;
         color: white;
-        &:hover {
-            background: lighten(#40444c, 10%);
+        &:hover .sidenav-header {
+            background: lighten(#333645, 10%);
         }
     }
 

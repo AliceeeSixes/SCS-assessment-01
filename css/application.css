@@ -425,8 +425,8 @@ ul.sidenav-list {
     flex-direction: column;
     height: fit-content;
     color: white; }
-    ul.sidenav-list li:hover {
-      background: #575d68; }
+    ul.sidenav-list li:hover .sidenav-header {
+      background: #494d62; }
 
 .nav__icon {
   height: 100%;
