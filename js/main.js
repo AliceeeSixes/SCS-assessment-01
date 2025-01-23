@@ -67,7 +67,7 @@ $("#partners2").slick({
     arrows: false,
     speed: 300,
     autoplaySpeed: 3000,
-    autoplay: false,
+    autoplay: true,
     variableWidth: true,
     infinite: true,
     draggable: false,

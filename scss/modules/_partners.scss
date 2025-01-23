@@ -2,14 +2,14 @@
 #partners2 {
     width: 100%;
     height: fit-content;
-    padding: 50px 0;
+    padding: 50px 0 20px;
     display: flex;
     flex-direction: row;
 }
 
 .partner-image {
     position: relative;
-    padding: 0px 50px;
+    padding: 40px 50px 0;
     filter: grayscale(1);
     &:hover {
         filter: grayscale(0);
@@ -27,15 +27,14 @@
     background: $grey;
     width: 280px;
     height: fit-content;
-    top: -100px;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
+    margin: auto;
     display: none;
     color: white;
     text-align: center;
+    left: calc(50% - 140px);
+    bottom: 100%;
     padding: 20px;
-    z-index: 2;
+    z-index: 10;
     &::after {
         content: "";
         display: block;
@@ -51,10 +50,35 @@
         border-color: transparent transparent $grey transparent;
         transform: rotate(180deg);
     }
+    button {
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+        align-content: center;
+        margin: 5px auto;
+        padding: 15px;
+        text-transform: uppercase;
+        color: white;
+    }
 
 
 }
 
 .slick-list {
     overflow: visible;
+}
+
+button{
+    &.green {
+    background: #30cc74;
+    }
+    &.purple {
+        background: #986cb4;
+    }
+    &.yellow {
+        background: #f7b322;
+    }
+    &.blue {
+        background: #4884d4;
+    }
 }
