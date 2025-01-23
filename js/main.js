@@ -49,6 +49,33 @@ $(".slick").slick({
 })
 
 
+// Partners
+$("#partners1").slick({
+    arrows: false,
+    speed: 300,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    variableWidth: true,
+    infinite: true,
+    draggable: false,
+    swipe: false,
+    pauseOnHover: true
+
+});
+
+$("#partners2").slick({
+    arrows: false,
+    speed: 300,
+    autoplaySpeed: 3000,
+    autoplay: false,
+    variableWidth: true,
+    infinite: true,
+    draggable: false,
+    swipe: false,
+    pauseOnHover: true
+
+});
+
 // Sticky/unsticky header/nav
 
 stickyNav = function () {
