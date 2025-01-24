@@ -1033,7 +1033,8 @@ li.slick-active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: fit-content; }
+  width: fit-content;
+  transition: 0.3s ease; }
 
 #client__grid {
   padding: 15px;

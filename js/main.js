@@ -5,14 +5,14 @@ let sideToggle = false;
 // Sidenav functions
 
 enableSideNav = function () {
-    $("body").addClass("showSideNav");
+    $(".wrapper").addClass("showSideNav");
     $("#toggleSideNav").addClass("modal");
     $(".hamburger").addClass("hamburger-anim-in");
     let sideToggle = true;
 }
 
 disableSideNav = function () {
-    $("body").removeClass("showSideNav");
+    $(".wrapper").removeClass("showSideNav");
     $("#toggleSideNav").removeClass("modal");
     $(".hamburger").removeClass("hamburger-anim-in");
     let sideToggle = false;
