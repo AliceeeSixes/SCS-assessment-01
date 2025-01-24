@@ -7,12 +7,14 @@ let sideToggle = false;
 enableSideNav = function () {
     $("body").addClass("showSideNav");
     $("#toggleSideNav").addClass("modal");
+    $(".hamburger").addClass("hamburger-anim-in");
     let sideToggle = true;
 }
 
 disableSideNav = function () {
     $("body").removeClass("showSideNav");
     $("#toggleSideNav").removeClass("modal");
+    $(".hamburger").removeClass("hamburger-anim-in");
     let sideToggle = false;
 }
 
