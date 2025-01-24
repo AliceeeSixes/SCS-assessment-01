@@ -302,13 +302,13 @@ button.searchicon--mobile {
     }
     &::before {
         top: -10px;
-        transition: top .3s ease .3s;
+        transition: top .2s ease .2s;
     }
     &::after {
         bottom: -10px;
-        transition: bottom .3s ease .3s;
+        transition: bottom .2s ease .2s;
     }
-    transition: .3s ease;
+    transition: .2s ease;
 
     
 }
@@ -316,16 +316,16 @@ button.searchicon--mobile {
 .hamburger-anim-in {
     &::before {
         top: 0;
-        transition: top .3s ease-out, transform .3s ease .3s;
+        transition: top .2s ease-out, transform .2s ease .2s;
         transform: rotate(-90deg);
     }
     &::after {
         bottom: 0;
-        transition: bottom .3s ease-out, transform .3s ease .3s;
+        transition: bottom .2s ease-out, transform .2s ease .2s;
     }
 
     transform: rotate(225deg);
-    transition: transform .3s ease .3s;
+    transition: transform .2s ease .2s;
 
 }
 

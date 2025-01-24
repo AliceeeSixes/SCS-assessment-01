@@ -7,6 +7,7 @@
     flex-direction: row;
 }
 
+
 .partner-image {
     position: relative;
     padding: 40px 50px 0;
@@ -64,9 +65,6 @@
 
 }
 
-.slick-list {
-    overflow: visible;
-}
 
 button{
     &.green {
@@ -81,4 +79,8 @@ button{
     &.blue {
         background: #4884d4;
     }
+}
+
+.slick-list {
+    overflow: visible;
 }
