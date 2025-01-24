@@ -1,7 +1,11 @@
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: fit-content;
+    width: 100vw;
     transition: 0.3s ease;
+    overflow-x: hidden;
+    z-index: 1;
+    background: white;
 }

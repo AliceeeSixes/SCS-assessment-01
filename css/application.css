@@ -409,12 +409,18 @@ span {
   transition: 0.3s ease;
   height: 100vh;
   overflow: auto;
-  position: sticky;
+  position: fixed;
   top: 0;
-  padding: 0; }
+  right: 0;
+  padding: 0;
+  z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
   @media (min-width: 992px) {
     #sidenav {
       width: 350px; } }
+  #sidenav::-webkit-scrollbar {
+    display: none; }
 
 ul.sidenav-list {
   margin: 0;
@@ -1036,11 +1042,15 @@ li.slick-active {
   width: 100vw; }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: fit-content;
-  transition: 0.3s ease; }
+  width: 100vw;
+  transition: 0.3s ease;
+  overflow-x: hidden;
+  z-index: 1;
+  background: white; }
 
 #client__grid {
   padding: 15px;
