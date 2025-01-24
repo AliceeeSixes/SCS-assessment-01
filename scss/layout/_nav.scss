@@ -17,7 +17,10 @@
 
 // Side navbar (will be enabled using javascript)
 #sidenav {
-    width: 350px;
+    width: 250px;
+    @media (min-width: $break-medium) {
+        width: 350px;
+    }
     background: red;
     transition: 0.3s ease;
     height: 100vh;
@@ -68,7 +71,10 @@ ul.sidenav-list {
 }
 
 .showSideNav {
-    transform: translate(-350px, 0);
+    transform: translate(-250px, 0);
+    @media (min-width: $break-medium) {
+        transform: translate(-350px, 0);
+    }
 }
 
 

@@ -404,7 +404,7 @@ span {
       display: flex; } }
 
 #sidenav {
-  width: 350px;
+  width: 250px;
   background: red;
   transition: 0.3s ease;
   height: 100vh;
@@ -412,6 +412,9 @@ span {
   position: sticky;
   top: 0;
   padding: 0; }
+  @media (min-width: 992px) {
+    #sidenav {
+      width: 350px; } }
 
 ul.sidenav-list {
   margin: 0;
@@ -446,7 +449,10 @@ ul.sidenav-list {
     text-align: center; }
 
 .showSideNav {
-  transform: translate(-350px, 0); }
+  transform: translate(-250px, 0); }
+  @media (min-width: 992px) {
+    .showSideNav {
+      transform: translate(-350px, 0); } }
 
 .sidenav-header {
   height: 56px;
