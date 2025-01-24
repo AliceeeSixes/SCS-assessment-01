@@ -308,6 +308,9 @@ template {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   position: relative;
   overflow-x: hidden;
