@@ -8,6 +8,7 @@ body {
     position: relative;
     overflow-x: hidden;
     transition: .5s ease;
+    min-width: 100vw;
 }
 
 h2, h3, h4 {
