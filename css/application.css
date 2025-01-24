@@ -314,8 +314,7 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
-  transition: .5s ease;
-  min-width: 100vw; }
+  transition: .5s ease; }
 
 h2, h3, h4 {
   font-weight: 400; }
@@ -1046,7 +1045,6 @@ li.slick-active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
   transition: 0.3s ease;
   overflow-x: hidden;
   z-index: 1;
