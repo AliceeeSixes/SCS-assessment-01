@@ -78,13 +78,13 @@ header * {
 
 .header__toggle-nav,
 #header__tel {
-    background: $dark-grey;
+    background: white;
     padding: 10px;
     border-radius: 3px;
     height: 56px;
     width: 56px;
     text-align: center;
-    color: white;
+    color: $grey;
     align-content: center;
     font-size: 2em;
 }

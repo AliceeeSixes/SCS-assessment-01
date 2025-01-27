@@ -638,13 +638,13 @@ header * {
 
 .header__toggle-nav,
 #header__tel {
-  background: #212330;
+  background: white;
   padding: 10px;
   border-radius: 3px;
   height: 56px;
   width: 56px;
   text-align: center;
-  color: white;
+  color: #323544;
   align-content: center;
   font-size: 2em; }
 
