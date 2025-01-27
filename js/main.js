@@ -108,3 +108,39 @@ $(window).scroll(function() {
 
 
 
+// Cookies popup
+
+// Initialise cookies bool
+
+
+// Retrieve bool from storage
+let cookies = localStorage.getItem("cookiesBool");
+console.log("cookies: "+cookies);
+// Show popup if no stored value
+if (cookies === null) {
+    $("#cookies-popup-outer").css("display","flex");
+}
+
+// Change returned string into bool
+if (cookies == "true") {
+    cookies = true;
+    
+} else {
+    cookies = false;
+}
+
+
+// Popup button functions
+let acceptCookies = function () {
+    cookies = true;
+    localStorage.setItem("cookiesBool",cookies);
+    $("#cookies-popup-outer").css("display","none");
+}
+
+let declineCookies = function () {
+    cookies = false;
+    localStorage.setItem("cookiesBool",cookies);
+    $("#cookies-popup-outer").css("display","none");
+};
+
+
