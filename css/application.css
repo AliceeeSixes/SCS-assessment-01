@@ -421,7 +421,7 @@ span {
   #sidenav::-webkit-scrollbar {
     display: none; }
 
-ul.sidenav-list {
+div.sidenav-list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -429,7 +429,7 @@ ul.sidenav-list {
   flex-direction: column;
   height: fit-content;
   color: white; }
-  ul.sidenav-list li {
+  div.sidenav-list div.item {
     margin: 0;
     padding: 0;
     display: flex;
@@ -437,7 +437,7 @@ ul.sidenav-list {
     flex-direction: column;
     height: fit-content;
     color: white; }
-    ul.sidenav-list li:hover .sidenav-header {
+    div.sidenav-list div.item:hover .sidenav-header {
       background: #494d62; }
 
 .nav__icon {
@@ -460,6 +460,7 @@ ul.sidenav-list {
       transform: translate(-350px, 0); } }
 
 .sidenav-header {
+  color: white;
   height: 56px;
   background: #333645;
   border-top: 1px solid #494d62;
@@ -467,6 +468,7 @@ ul.sidenav-list {
   padding-left: 10px; }
 
 .sidenav-button {
+  color: white;
   height: 51px;
   position: relative;
   background: #282c34;
@@ -516,6 +518,7 @@ ul.sidenav-list {
     display: block;
     overflow: hidden; }
   .sidenav-mobile .sidenav-mobile-button {
+    color: white;
     display: block;
     width: 233px;
     height: 113px;
@@ -528,6 +531,7 @@ ul.sidenav-list {
     .sidenav-mobile .sidenav-mobile-button h2,
     .sidenav-mobile .sidenav-mobile-button span,
     .sidenav-mobile .sidenav-mobile-button h4 {
+      color: white;
       margin: auto;
       display: block;
       width: fit-content;
@@ -562,6 +566,7 @@ ul.sidenav-list {
   color: #A8341C; }
 
 .sidenav-mobile-contact {
+  color: white;
   margin: 20px auto;
   display: block;
   width: 233px;

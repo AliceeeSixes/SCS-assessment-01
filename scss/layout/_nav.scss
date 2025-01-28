@@ -39,7 +39,7 @@
 
 }
 
-ul.sidenav-list {
+div.sidenav-list {
     margin: 0;
     padding: 0;
     display: flex;
@@ -47,7 +47,7 @@ ul.sidenav-list {
     flex-direction: column;
     height: fit-content;
     color: white;
-    li {
+    div.item {
         margin: 0;
         padding: 0;
         display: flex;
@@ -58,6 +58,7 @@ ul.sidenav-list {
         &:hover .sidenav-header {
             background: lighten(#333645, 10%);
         }
+
     }
 
 }
@@ -87,6 +88,7 @@ ul.sidenav-list {
 
 
 .sidenav-header {
+    color: white;
     height: 56px;
     background: #333645;
     border-top: 1px solid lighten(#333645, 10%);
@@ -95,6 +97,7 @@ ul.sidenav-list {
 }
 
 .sidenav-button {
+    color: white;
     height: 51px;
     position: relative;
     background: #282c34;
@@ -156,6 +159,7 @@ ul.sidenav-list {
         overflow: hidden;
     }
     .sidenav-mobile-button {
+        color: white;
         display: block;
         width: 233px;
         height: 113px;
@@ -166,6 +170,7 @@ ul.sidenav-list {
         h2,
         span,
         h4 {
+            color: white;
             margin: auto;
             display: block;
             width: fit-content;
@@ -197,6 +202,7 @@ ul.sidenav-list {
 }
 
 .sidenav-mobile-contact {
+    color: white;
     margin: 20px auto;
     display: block;
     width: 233px;
