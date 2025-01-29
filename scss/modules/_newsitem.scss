@@ -73,9 +73,9 @@
 }
 
 .news__item--author {
-    border-top: 1px $light-grey solid;
+    border-top: 1px lighten($light-grey, 20%) solid;
     margin-top : 30px;
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -127,6 +127,9 @@
         color: $grey;
         line-height: 1.5;
     }
+    p {
+        margin: 0;
+    }
     font-size: 1.1em;
 
 }
@@ -137,10 +140,13 @@
 .news__container {
     flex-direction: column;
     width: 90%;
-    @media (min-width: $break-medium) {
+    @media (min-width: $break-small) {
         flex-direction: row;
-        width: 930px;
+        width: 750px;
         justify-content: center;
+    }
+    @media (min-width: $break-large) {
+        width: 930px;
     }
     @media (min-width: $break-xl) {
         width: 1200px;

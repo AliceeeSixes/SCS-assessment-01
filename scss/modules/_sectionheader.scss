@@ -16,12 +16,15 @@
     a:hover {
         text-decoration: underline;
     }
+    a {
+        display: block;
+    }
 }
 
 
 .section__footer {
-    margin: 50px auto;
-    height: 100px;
+    margin: 20px auto;
+    height: fit-content;
     text-align: center;
 }
 
@@ -32,7 +35,7 @@
     @media (min-width: $break-small) {
         width: 750px;
     }
-    @media (min-width: $break-medium) {
+    @media (min-width: $break-large) {
         width: 930px;
     }
     @media (min-width: $break-xl) {
@@ -44,4 +47,8 @@
     @media (min-width: $break-small) {
         display: none;
     }
+}
+
+#news-section .section__header h1 {
+    font-weight: $font-weight--bold;
 }

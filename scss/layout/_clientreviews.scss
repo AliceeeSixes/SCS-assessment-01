@@ -19,6 +19,8 @@
 #stars {
     color: goldenrod;
     font-size: 3em;
+    height: fit-content;
+    line-height: 1;
 }
 
 
@@ -26,9 +28,11 @@
 // media queries
 
 #client__grid {
+    padding-bottom: 30px;
     width: 95%;
-    @media (min-width: $break-medium) {
-        width: 60%;
+    @media (min-width: $break-small) {
+        padding-bottom: 0;
+        width: 750px;
         grid-auto-flow: column;
     }
     @media (min-width: $break-large) {
