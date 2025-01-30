@@ -86,26 +86,10 @@ footer {
 #footer__inner {
     margin: auto;
     width: 100%;
-    @media (min-width: $break-small) {
-        width: 730px;
-    }
-    @media (min-width: $break-medium) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }
 
 #footer__bottom--inner {
     margin: auto;
-    @media (min-width: $break-small) {
-        width: 750px;
-    }
-    @media (min-width: $break-medium) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }

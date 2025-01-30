@@ -32,15 +32,7 @@
 
 .section__header {
     width: 90%;
-    @media (min-width: $break-small) {
-        width: 750px;
-    }
-    @media (min-width: $break-large) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }
 
 .section__footer {

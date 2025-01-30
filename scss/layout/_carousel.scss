@@ -64,7 +64,6 @@
         width: 100%;
     }
     @media (min-width: $break-medium) {
-        width: 930px;
         text-align: left;
         p, .carousel__button {
             margin: 0;
@@ -73,9 +72,7 @@
             width: 60%;
         }
     }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }
 
 // Responsive background change to make text readable at smaller sizes

@@ -32,15 +32,9 @@
     width: 95%;
     @media (min-width: $break-small) {
         padding-bottom: 0;
-        width: 750px;
         grid-auto-flow: column;
     }
-    @media (min-width: $break-large) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }
 
 .client__column {

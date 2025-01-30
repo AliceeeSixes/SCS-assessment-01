@@ -32,10 +32,5 @@
 
 .submenu h3,
 .submenu__grid {
-    @media (min-width: $break-medium) {
-        width: 970px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }

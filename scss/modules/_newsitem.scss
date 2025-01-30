@@ -26,6 +26,7 @@
         overflow: hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
     }
 }
 
@@ -142,15 +143,9 @@
     width: 90%;
     @media (min-width: $break-small) {
         flex-direction: row;
-        width: 750px;
         justify-content: center;
     }
-    @media (min-width: $break-large) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
+    @include container;
 }
 
 .news__item {
