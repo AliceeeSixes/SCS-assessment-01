@@ -412,14 +412,10 @@ span {
   top: 0;
   right: 0;
   padding: 0;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none; }
+  z-index: 0; }
   @media (min-width: 992px) {
     #sidenav {
       width: 350px; } }
-  #sidenav::-webkit-scrollbar {
-    display: none; }
 
 div.sidenav-list {
   margin: 0;
