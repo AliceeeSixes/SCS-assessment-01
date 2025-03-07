@@ -265,18 +265,19 @@ button.searchicon--mobile {
 }
 
 
-#toggleSideNav.modal {
-    position: relative;
+.modal {
+    top: 0;
+    left: 0;
     transition: 0.3s ease;
     &::before {
         content: "";
-        position: fixed;
+        position: absolute;
         display: block;
         height: 100%;
         width: 100vw;
         background: rgb(0,0,0);
         opacity: 0.2;
-        z-index: 2;
+        z-index: 20;
         left: 0;
         top: 0;
         transition: 0.3s ease;
@@ -286,10 +287,11 @@ button.searchicon--mobile {
 
 
 #top-sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
     transition: 0.3s ease;
+    width: 100%;
 }
 
 .hamburger {

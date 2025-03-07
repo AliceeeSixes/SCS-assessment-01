@@ -4,13 +4,9 @@
 
 }
 
-html {
-    overflow-x: hidden;
-}
 
 body {
     position: relative;
-    overflow-x: hidden;
     transition: .5s ease;
 }
 
@@ -41,7 +37,7 @@ h3 {
 section {
     background: white;
     color: $grey;
-    width: 100%;
+    width: 100vw;
 
     &.dark {
         background: $grey;
@@ -124,14 +120,3 @@ span {
     display: none;
 }
 
-@mixin container {
-    @media (min-width: $break-small) {
-        width: 750px;
-    }
-    @media (min-width: $break-medium) {
-        width: 930px;
-    }
-    @media (min-width: $break-xl) {
-        width: 1200px;
-    }
-}

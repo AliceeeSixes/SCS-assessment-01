@@ -308,12 +308,8 @@ template {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box; }
 
-html {
-  overflow-x: hidden; }
-
 body {
   position: relative;
-  overflow-x: hidden;
   transition: .5s ease; }
 
 #mainpage {
@@ -335,7 +331,7 @@ h3 {
 section {
   background: white;
   color: #323544;
-  width: 100%; }
+  width: 100vw; }
   section.dark {
     background: #323544;
     color: white; }
@@ -801,27 +797,29 @@ button.searchicon--mobile {
   #toggleSideNav:hover {
     background: #212330; }
 
-#toggleSideNav.modal {
-  position: relative;
+.modal {
+  top: 0;
+  left: 0;
   transition: 0.3s ease; }
-  #toggleSideNav.modal::before {
+  .modal::before {
     content: "";
-    position: fixed;
+    position: absolute;
     display: block;
     height: 100%;
     width: 100vw;
     background: black;
     opacity: 0.2;
-    z-index: 2;
+    z-index: 20;
     left: 0;
     top: 0;
     transition: 0.3s ease; }
 
 #top-sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+  width: 100%; }
 
 .hamburger {
   position: relative;
@@ -1074,7 +1072,8 @@ li.slick-active {
 
 #mainpage {
   float: left;
-  width: 100vw; }
+  width: 100vw;
+  position: relative; }
 
 .wrapper {
   position: relative;
