@@ -81,11 +81,11 @@ $("#partners2").slick({
 // Sticky/unsticky header/nav
 
 stickyNav = function () {
-    $("#top-sticky").css("top","0");
+    $("#top-sticky").css("top","0")
 }
 
 unstickyNav = function () {
-    $("#top-sticky").css("top","-100%");
+    $("#top-sticky").css("top","-100%")
 }
 
 
@@ -98,11 +98,9 @@ $(window).scroll(function() {
     let scroll = $(window).scrollTop();
     if (scroll > position) {
         unstickyNav();
-        console.log("Unsticky");
         
     } else {
         stickyNav();
-        console.log("Sticky");
 
     }
     position = scroll;
