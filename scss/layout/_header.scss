@@ -286,10 +286,11 @@ button.searchicon--mobile {
 
 
 #top-sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
     transition: 0.3s ease;
+    width: 100vw;
 }
 
 .hamburger {

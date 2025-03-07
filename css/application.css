@@ -818,10 +818,11 @@ button.searchicon--mobile {
     transition: 0.3s ease; }
 
 #top-sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+  width: 100vw; }
 
 .hamburger {
   position: relative;
@@ -1074,7 +1075,8 @@ li.slick-active {
 
 #mainpage {
   float: left;
-  width: 100vw; }
+  width: 100vw;
+  position: relative; }
 
 .wrapper {
   position: relative;
