@@ -1,6 +1,10 @@
 #mainpage {
-    float: left;
-    width: 100vw;
+    left: 0;
+    width: 100%;
     position: relative;
+    overflow: clip;
+    transition: 0.3s ease;
+    z-index: 10;
+    background: white;
 }
 

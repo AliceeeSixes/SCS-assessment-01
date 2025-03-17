@@ -8,6 +8,8 @@
 body {
     position: relative;
     transition: .5s ease;
+    overflow: clip;
+    overflow-y: scroll;
 }
 
 #mainpage {

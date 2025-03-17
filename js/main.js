@@ -5,14 +5,14 @@ let sideToggle = false;
 // Sidenav functions
 
 enableSideNav = function () {
-    $(".wrapper").addClass("showSideNav");
+    $("#mainpage").addClass("showSideNav");
     $("#sideNavModal").addClass("modal");
     $(".hamburger").addClass("hamburger-anim-in");
     let sideToggle = true;
 }
 
 disableSideNav = function () {
-    $(".wrapper").removeClass("showSideNav");
+    $("#mainpage").removeClass("showSideNav");
     $("#sideNavModal").removeClass("modal");
     $(".hamburger").removeClass("hamburger-anim-in");
     let sideToggle = false;
@@ -82,30 +82,30 @@ $("#partners2").slick({
 // Sticky/unsticky header/nav
 
 stickyNav = function () {
-    $("#top-sticky").css("transform","translate(0,0)")
+    $("#top-sticky").css("top", "0")
 }
 
 unstickyNav = function () {
-    $("#top-sticky").css("transform","translate(0, -100%)")
+    $("#top-sticky").css("top", "-100%")
 }
 
 
 
 // Detect scroll direction
 
-// let position = $(window).scrollTop();
+let position = $(window).scrollTop();
  
-// $(window).scroll(function() {
-//     let scroll = $(window).scrollTop();
-//     if (scroll > position) {
-//         unstickyNav();
+$(window).scroll(function() {
+    let scroll = $(window).scrollTop();
+    if (scroll > position) {
+        unstickyNav();
         
-//     } else {
-//         stickyNav();
+    } else {
+        stickyNav();
 
-//     }
-//     position = scroll;
-// });
+    }
+    position = scroll;
+});
 
 
 

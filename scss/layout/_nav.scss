@@ -29,11 +29,7 @@
     top: 0;
     right: 0;
     padding: 0;
-    z-index: 0;
-
-
-
-
+    z-index: 5;
 }
 
 div.sidenav-list {
@@ -75,10 +71,10 @@ div.sidenav-list {
     }
 }
 
-.showSideNav {
-    transform: translate(-250px, 0);
+#mainpage.showSideNav {
+    left: -250px;
     @media (min-width: $break-medium) {
-        transform: translate(-350px, 0);
+        left: -350px;
     }
 }
 
