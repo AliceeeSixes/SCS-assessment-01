@@ -113,7 +113,7 @@ form.searchbar--desktop {
     display: none;
     & input[type="search"] {
         width: 200px;
-        border: 1px solid $light-grey;
+        border: 1px solid $pale-grey;
         border-radius: 0;
         margin-right: 0;
         padding: 20px;
@@ -255,7 +255,7 @@ button.searchicon--mobile {
         opacity: 0;
     }
     height: 56px;
-    width: 56px;
+    width: 63px;
     border-radius: 3px;
     &:hover {
         background: $dark_grey;
@@ -296,7 +296,7 @@ button.searchicon--mobile {
 .hamburger {
     position: relative;
     width: 30px;
-    height: 3px;
+    height: 4px;
     background: white;
     align-self: center;
     margin: auto;
@@ -305,7 +305,7 @@ button.searchicon--mobile {
         content: "";
         display: block;
         width: 30px;
-        height: 3px;
+        height: 4px;
         background: white;
         position: absolute;
         

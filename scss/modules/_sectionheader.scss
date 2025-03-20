@@ -5,10 +5,13 @@
     h1:first-child {
         float: left;
         font-weight: $font-weight--medium;
+        font-size: 2.7em;
     }
     h1:last-child {
         float: right;
         display: none;
+        font-size: 2.25em;
+        font-weight: 600;
         @media (min-width: $break-small) {
             display: block;
         }
@@ -38,5 +41,5 @@
 }
 
 #news-section .section__header h1 {
-    font-weight: $font-weight--bold;
+    font-weight: 500;
 }
