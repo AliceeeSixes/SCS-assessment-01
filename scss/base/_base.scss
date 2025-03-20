@@ -122,3 +122,15 @@ span {
     display: none;
 }
 
+.container {
+    width: 90%;
+    @media (min-width: $break-small) {
+        width: 750px;
+    }
+    @media (min-width: $break-medium) {
+        width: 930px;
+    }
+    @media (min-width: $break-xl) {
+        width: 1200px;
+    }
+}

@@ -392,6 +392,18 @@ span {
 .hidden {
   display: none; }
 
+.container {
+  width: 90%; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 930px; } }
+  @media (min-width: 1300px) {
+    .container {
+      width: 1200px; } }
+
 #topnav {
   background: #323544; }
 
@@ -613,15 +625,6 @@ header * {
       .header--inner * {
         margin-left: 10px;
         margin-right: 10px; } }
-  @media (min-width: 768px) {
-    .header--inner {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    .header--inner {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    .header--inner {
-      width: 1200px; } }
 
 .header__button {
   padding-left: 5px;
@@ -876,19 +879,6 @@ button.searchicon--mobile {
     width: 100%;
     font-size: 1.2em; }
 
-@media (min-width: 768px) {
-  .submenu h3,
-  .submenu__grid {
-    width: 750px; } }
-@media (min-width: 992px) {
-  .submenu h3,
-  .submenu__grid {
-    width: 930px; } }
-@media (min-width: 1300px) {
-  .submenu h3,
-  .submenu__grid {
-    width: 1200px; } }
-
 .slick {
   width: 100%;
   position: relative;
@@ -933,7 +923,6 @@ button.searchicon--mobile {
     background: #DE093F; }
 
 .carousel__text {
-  width: 90%;
   text-align: center;
   position: relative; }
   .carousel__text p, .carousel__text .carousel__button {
@@ -947,15 +936,6 @@ button.searchicon--mobile {
         margin: 0; }
       .carousel__text p {
         width: 60%; } }
-  @media (min-width: 768px) {
-    .carousel__text {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    .carousel__text {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    .carousel__text {
-      width: 1200px; } }
 
 #slick-slide00 {
   background: center no-repeat url("../img/carousel/leading-company.webp"), rgba(0, 0, 0, 0.5); }
@@ -1117,15 +1097,6 @@ li.slick-active {
     #client__grid {
       padding-bottom: 0;
       grid-auto-flow: column; } }
-  @media (min-width: 768px) {
-    #client__grid {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    #client__grid {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    #client__grid {
-      width: 1200px; } }
 
 .client__column {
   max-width: 100%; }
@@ -1196,29 +1167,10 @@ footer {
   font-size: .8em; }
 
 #footer__inner {
-  margin: auto;
-  width: 100%; }
-  @media (min-width: 768px) {
-    #footer__inner {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    #footer__inner {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    #footer__inner {
-      width: 1200px; } }
+  margin: auto; }
 
 #footer__bottom--inner {
   margin: auto; }
-  @media (min-width: 768px) {
-    #footer__bottom--inner {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    #footer__bottom--inner {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    #footer__bottom--inner {
-      width: 1200px; } }
 
 #cookies-popup-outer {
   width: 100%;
@@ -1767,18 +1719,6 @@ button.blue {
   height: fit-content;
   text-align: center; }
 
-.section__header {
-  width: 90%; }
-  @media (min-width: 768px) {
-    .section__header {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    .section__header {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    .section__header {
-      width: 1200px; } }
-
 @media (min-width: 768px) {
   .section__footer {
     display: none; } }
@@ -1907,21 +1847,11 @@ button.blue {
     margin: 0; }
 
 .news__container {
-  flex-direction: column;
-  width: 90%; }
+  flex-direction: column; }
   @media (min-width: 768px) {
     .news__container {
       flex-direction: row;
       justify-content: center; } }
-  @media (min-width: 768px) {
-    .news__container {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    .news__container {
-      width: 930px; } }
-  @media (min-width: 1300px) {
-    .news__container {
-      width: 1200px; } }
 
 .news__item {
   width: 100%; }

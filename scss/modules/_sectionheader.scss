@@ -30,10 +30,6 @@
 
 // media queries
 
-.section__header {
-    width: 90%;
-    @include container;
-}
 
 .section__footer {
     @media (min-width: $break-small) {

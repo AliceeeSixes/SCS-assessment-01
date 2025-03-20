@@ -54,7 +54,6 @@
 // Responsive sizing for carousel
 
 .carousel__text {
-    width: 90%;
     text-align: center;
     position: relative;
     p, .carousel__button {
@@ -72,7 +71,6 @@
             width: 60%;
         }
     }
-    @include container;
 }
 
 // Responsive background change to make text readable at smaller sizes
