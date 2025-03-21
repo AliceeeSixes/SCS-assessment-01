@@ -610,7 +610,7 @@ header * {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 5px;
   height: 100%;
   width: 100%;
   margin: auto;
@@ -623,8 +623,8 @@ header * {
     .header--inner {
       padding: 0 15px; }
       .header--inner * {
-        margin-left: 10px;
-        margin-right: 10px; } }
+        margin-left: 5px;
+        margin-right: 5px; } }
 
 .header__button {
   padding-left: 5px;
@@ -677,7 +677,7 @@ form[class*="searchbar"] {
 form.searchbar--desktop {
   display: none; }
   form.searchbar--desktop input[type="search"] {
-    width: 200px;
+    width: 170px;
     border: 1px solid #d9dbdc;
     border-radius: 0;
     margin-right: 0;
@@ -773,12 +773,10 @@ button.searchicon--mobile {
     width: 100%;
     height: auto;
     max-height: 60px;
-    max-width: 290px; }
+    max-width: 370px; }
   @media (min-width: 768px) {
-    #header__img {
-      margin-left: 30px; }
-      #header__img img {
-        width: auto; } }
+    #header__img img {
+      width: 370px; } }
 
 .break {
   flex-basis: 100%;
@@ -1099,7 +1097,17 @@ li.slick-active {
       grid-auto-flow: column; } }
 
 .client__column {
-  max-width: 100%; }
+  max-width: 100%;
+  padding-bottom: 30px; }
+  .client__column .button--inline {
+    display: inline-block; }
+    @media (min-width: 992px) {
+      .client__column .button--inline {
+        display: block;
+        width: fit-content; } }
+    @media (min-width: 1260px) {
+      .client__column .button--inline {
+        display: inline-block; } }
 
 footer {
   background: #323544;

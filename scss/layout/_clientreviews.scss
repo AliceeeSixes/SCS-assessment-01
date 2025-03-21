@@ -41,4 +41,16 @@
 
 .client__column {
     max-width: 100%;
+    padding-bottom: 30px;
+    .button--inline {
+        display: inline-block;
+        @media (min-width: $break-medium) {
+            display: block;
+            width: fit-content;
+        }
+        @media (min-width: $break-large) {
+            display: inline-block;
+        }
+
+    }
 }
