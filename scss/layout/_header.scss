@@ -123,6 +123,9 @@ form.searchbar--desktop {
         &:focus {
             box-shadow: inset 0 0 2px $light-grey, 0 0 5px 1px #5bc0de;
         }
+        @media (min-width: $break-large) {
+            width: 240px;
+        }
     }
     @media (min-width: $break-small) {
         display: block;

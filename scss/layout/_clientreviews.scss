@@ -32,7 +32,6 @@
 
 #client__grid {
     padding-bottom: 30px;
-    width: 95%;
     @media (min-width: $break-small) {
         padding-bottom: 0;
         grid-auto-flow: column;
@@ -52,5 +51,14 @@
             display: inline-block;
         }
 
+    }
+    a.inline {
+        color: white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    blockquote {
+        margin-bottom: 30px;
     }
 }
