@@ -393,7 +393,8 @@ span {
   display: none; }
 
 .container {
-  width: 90%; }
+  width: 90%;
+  padding-bottom: 30px; }
   @media (min-width: 768px) {
     .container {
       width: 750px; } }
@@ -612,19 +613,21 @@ header * {
   align-items: center;
   padding: 0 5px;
   height: 100%;
-  width: 100%;
   margin: auto;
-  justify-content: center;
+  margin: auto;
+  justify-content: space-between;
   align-content: center; }
   .header--inner * {
     margin-left: 5px;
     margin-right: 5px; }
   @media (min-width: 768px) {
+    .header--inner * {
+      margin-left: 5px;
+      margin-right: 5px; } }
+  @media (min-width: 1260px) {
     .header--inner {
-      padding: 0 15px; }
-      .header--inner * {
-        margin-left: 5px;
-        margin-right: 5px; } }
+      width: 100%;
+      justify-content: center; } }
 
 .header__button {
   padding-left: 5px;
@@ -650,10 +653,10 @@ header * {
 .header__toggle-nav,
 #header__tel {
   background: white;
-  padding: 10px;
+  padding: 5px;
   border-radius: 3px;
-  height: 56px;
-  width: 56px;
+  height: 46px;
+  width: 46px;
   text-align: center;
   color: #323544;
   align-content: center;
@@ -667,15 +670,18 @@ header * {
 
 form[class*="searchbar"] {
   padding: 0;
-  margin: auto 0;
+  margin: auto;
   height: 56px;
   color: #a3a8ac; }
+  @media (min-width: 992px) {
+    form[class*="searchbar"] {
+      margin: auto 0; } }
   form[class*="searchbar"] input[type="search"] {
-    display: inline;
     height: 100%; }
 
 form.searchbar--desktop {
-  display: none; }
+  display: none;
+  flex-direction: row; }
   form.searchbar--desktop input[type="search"] {
     width: 170px;
     border: 1px solid #d9dbdc;
@@ -692,17 +698,17 @@ form.searchbar--desktop {
         width: 240px; } }
   @media (min-width: 768px) {
     form.searchbar--desktop {
-      display: block; } }
+      display: flex; } }
   @media (min-width: 992px) {
-    form.searchbar--desktop {
+    form.searchbar--desktop input {
       display: none; }
-      form.searchbar--desktop + button {
-        border-radius: 3px; } }
+    form.searchbar--desktop button {
+      border-radius: 3px; } }
   @media (min-width: 1260px) {
-    form.searchbar--desktop {
-      display: block; }
-      form.searchbar--desktop + button {
-        border-radius: 0 3px 3px 0; } }
+    form.searchbar--desktop input {
+      display: flex; }
+    form.searchbar--desktop button {
+      border-radius: 0 3px 3px 0; } }
 
 form.searchbar--mobile {
   display: flex;
@@ -786,7 +792,6 @@ button.searchicon--mobile {
   height: 0; }
 
 #toggleSideNav {
-  margin-right: 10px;
   display: flex;
   background: #323544;
   transition: 0.3s ease;
@@ -1094,16 +1099,12 @@ li.slick-active {
   #stars i {
     padding-right: 25px; }
 
-#client__grid {
-  padding-bottom: 30px; }
-  @media (min-width: 768px) {
-    #client__grid {
-      padding-bottom: 0;
-      grid-auto-flow: column; } }
+@media (min-width: 768px) {
+  #client__grid {
+    grid-auto-flow: column; } }
 
 .client__column {
-  max-width: 100%;
-  padding-bottom: 30px; }
+  max-width: 100%; }
   .client__column .button--inline {
     display: inline-block; }
     @media (min-width: 992px) {
@@ -1189,7 +1190,8 @@ footer {
   margin: auto; }
 
 #footer__bottom--inner {
-  margin: auto; }
+  margin: auto;
+  padding: 0; }
 
 #cookies-popup-outer {
   width: 100%;
@@ -1367,7 +1369,6 @@ footer {
     color: white; }
 
 #card__grid {
-  width: 90%;
   margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -1379,14 +1380,9 @@ footer {
       grid-template-areas: "card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1 card-1" "card-2 card-2 card-2 card-2 card-2 card-2 card-2 card-2 card-2 card-2 card-2 card-2" "card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-4 card-4 card-4 card-5 card-5 card-5 card-5 card-5 card-5" "card-6 card-6 card-6 card-6 card-6 card-6 card-7 card-7 card-7 card-7 card-7 card-7"; } }
   @media (min-width: 992px) {
     #card__grid {
-      width: 750px;
       grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-4 card-4 card-4 card-5 card-5 card-5 card-5 card-5 card-5" "card-6 card-6 card-6 card-6 card-6 card-6 card-7 card-7 card-7 card-7 card-7 card-7"; } }
-  @media (min-width: 1260px) {
-    #card__grid {
-      width: 930px; } }
   @media (min-width: 1300px) {
     #card__grid {
-      width: 1200px;
       grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3" "card-4 card-4 card-4 card-5 card-5 card-5 card-6 card-6 card-6 card-7 card-7 card-7"; } }
 
 .card:nth-child(1) {

@@ -31,16 +31,13 @@
 // media queries
 
 #client__grid {
-    padding-bottom: 30px;
     @media (min-width: $break-small) {
-        padding-bottom: 0;
         grid-auto-flow: column;
     }
 }
 
 .client__column {
     max-width: 100%;
-    padding-bottom: 30px;
     .button--inline {
         display: inline-block;
         @media (min-width: $break-medium) {

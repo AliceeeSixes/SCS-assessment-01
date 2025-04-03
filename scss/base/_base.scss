@@ -41,6 +41,7 @@ section {
     color: $grey;
     width: 100vw;
 
+
     &.dark {
         background: $grey;
         color: white;
@@ -124,6 +125,7 @@ span {
 
 .container {
     width: 90%;
+    padding-bottom: 30px;
     @media (min-width: $break-small) {
         width: 750px;
     }

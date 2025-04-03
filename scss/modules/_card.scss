@@ -80,7 +80,6 @@
 }
 
 #card__grid {
-    width: 90%;
     margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
@@ -100,17 +99,15 @@
 
 
     @media (min-width: $break-medium) {
-        width: 750px;
+
         grid-template-areas:
         "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3"
         "card-4 card-4 card-4 card-4 card-4 card-4 card-5 card-5 card-5 card-5 card-5 card-5"
         "card-6 card-6 card-6 card-6 card-6 card-6 card-7 card-7 card-7 card-7 card-7 card-7";
     }
-    @media (min-width: $break-large) {
-        width: 930px;
-    }
+
     @media (min-width: $break-xl) {
-        width: 1200px;
+
         grid-template-areas:
         "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3"
         "card-4 card-4 card-4 card-5 card-5 card-5 card-6 card-6 card-6 card-7 card-7 card-7";
