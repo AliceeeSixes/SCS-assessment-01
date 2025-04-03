@@ -31,7 +31,7 @@
 // media queries
 
 #client__grid {
-    @media (min-width: $break-small) {
+    @media (min-width: $break-medium) {
         grid-auto-flow: column;
     }
 }

@@ -80,7 +80,7 @@
 }
 
 #card__grid {
-    margin: 30px auto;
+    margin: 30px auto 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr); 
     grid-auto-rows: auto;
