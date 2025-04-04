@@ -6,10 +6,14 @@ img.social {
 }
 
 a.social {
-    display: inline-block;
+    display: flex;
     background: $dark-grey;
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 70px;
+    justify-content: center;
+    img {
+        margin: auto;
+    }
 }
 
 @each $social, $colour in $social--colours {
