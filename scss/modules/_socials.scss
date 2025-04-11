@@ -9,7 +9,10 @@ a.social {
     display: flex;
     background: $dark-grey;
     height: 56px;
-    width: 70px;
+    width: 110px;
+    @media (min-width: $break-xs) {
+        width: 70px
+    }
     justify-content: center;
     img {
         margin: auto;

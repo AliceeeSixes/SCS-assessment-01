@@ -35,7 +35,6 @@ header * {
             margin-right: 5px;
         }
     }
-    margin: auto;
     justify-content: space-between;
     align-content: center;
 
@@ -95,7 +94,9 @@ header * {
 #header__float-right {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    @media (min-width: $break-medium) {
+        gap: 10px;
+    }
 }
 
 

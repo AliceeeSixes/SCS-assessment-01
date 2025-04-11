@@ -620,7 +620,6 @@ header * {
   padding: 0 15px;
   height: 100%;
   margin: auto;
-  margin: auto;
   justify-content: space-between;
   align-content: center; }
   .header--inner * {
@@ -671,8 +670,10 @@ header * {
 
 #header__float-right {
   display: flex;
-  flex-direction: row;
-  gap: 10px; }
+  flex-direction: row; }
+  @media (min-width: 992px) {
+    #header__float-right {
+      gap: 10px; } }
 
 form[class*="searchbar"] {
   padding: 0;
@@ -1181,7 +1182,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    width: 150px; }
+    width: 230px; }
     @media (min-width: 481px) {
       #footer__logo #socials {
         width: auto; } }
@@ -1651,8 +1652,11 @@ a.social {
   display: flex;
   background: #212330;
   height: 56px;
-  width: 70px;
+  width: 110px;
   justify-content: center; }
+  @media (min-width: 481px) {
+    a.social {
+      width: 70px; } }
   a.social img {
     margin: auto; }
 
