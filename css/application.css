@@ -393,14 +393,15 @@ span {
   display: none; }
 
 .container {
-  width: 90%;
-  padding-bottom: 30px; }
+  width: 100%;
+  padding: 0 15px 30px; }
   @media (min-width: 768px) {
     .container {
-      width: 750px; } }
+      width: 750px;
+      padding: 0 0 30px; } }
   @media (min-width: 992px) {
     .container {
-      width: 930px; } }
+      width: 970px; } }
   @media (min-width: 1260px) {
     .container {
       width: 1200px; } }
@@ -624,9 +625,6 @@ header * {
     .header--inner * {
       margin-left: 5px;
       margin-right: 5px; } }
-  @media (min-width: 1260px) {
-    .header--inner {
-      justify-content: center; } }
 
 .header__button {
   padding-left: 5px;
@@ -637,13 +635,13 @@ header * {
   align-items: center;
   display: none;
   color: white; }
-  .header__button:nth-of-type(3) {
+  .header__button:nth-of-type(2) {
     background: #4d86d2; }
-    .header__button:nth-of-type(3):hover {
+    .header__button:nth-of-type(2):hover {
       background: #306CBC; }
-  .header__button:nth-of-type(4) {
+  .header__button:nth-of-type(3) {
     background: #a3a8ac; }
-    .header__button:nth-of-type(4):hover {
+    .header__button:nth-of-type(3):hover {
       background: #888f94; }
   @media (min-width: 992px) {
     .header__button {
@@ -652,20 +650,24 @@ header * {
 .header__toggle-nav,
 #header__tel {
   background: white;
-  padding: 5px;
   border-radius: 3px;
   height: 46px;
   width: 46px;
   text-align: center;
   color: #323544;
   align-content: center;
-  font-size: 2em; }
+  font-size: 1.8em; }
 
 @media (min-width: 768px) {
   #header__tel {
     display: none; } }
 #header__tel:hover {
   text-decoration: underline; }
+
+#header__float-right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; }
 
 form[class*="searchbar"] {
   padding: 0;
@@ -710,6 +712,7 @@ form.searchbar--desktop {
       border-radius: 0 3px 3px 0; } }
 
 form.searchbar--mobile {
+  margin-top: 5px;
   display: flex;
   width: 95%;
   border: 1px solid #a3a8ac;
@@ -796,7 +799,8 @@ button.searchicon--mobile {
   transition: 0.3s ease;
   height: 56px;
   width: 63px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  align-self: center; }
   #toggleSideNav::after {
     transition: 0.3s ease;
     opacity: 0; }

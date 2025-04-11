@@ -124,13 +124,14 @@ span {
 }
 
 .container {
-    width: 90%;
-    padding-bottom: 30px;
+    width: 100%;
+    padding: 0 15px 30px;
     @media (min-width: $break-small) {
         width: 750px;
+        padding: 0 0 30px;
     }
     @media (min-width: $break-medium) {
-        width: 930px;
+        width: 970px;
     }
     @media (min-width: $break-large) {
         width: 1200px;

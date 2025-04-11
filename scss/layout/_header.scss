@@ -35,9 +35,6 @@ header * {
             margin-right: 5px;
         }
     }
-    @media (min-width: $break-large) {
-        justify-content: center;
-    }
     margin: auto;
     justify-content: space-between;
     align-content: center;
@@ -55,13 +52,13 @@ header * {
     align-items: center;
     display: none;
     color: white;
-    &:nth-of-type(3) {
+    &:nth-of-type(2) {
         background: lighten($cerulean-blue, 10%);
         &:hover {
             background: $cerulean-blue;
         }
     }
-    &:nth-of-type(4) {
+    &:nth-of-type(3) {
         background: $light-grey;
         &:hover {
             background: darken($light-grey, 10%);
@@ -77,14 +74,13 @@ header * {
 .header__toggle-nav,
 #header__tel {
     background: white;
-    padding: 5px;
     border-radius: 3px;
     height: 46px;
     width: 46px;
     text-align: center;
     color: $grey;
     align-content: center;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 #header__tel {
@@ -94,6 +90,12 @@ header * {
     &:hover {
         text-decoration: underline;
     }
+}
+
+#header__float-right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 
@@ -156,6 +158,7 @@ form.searchbar--desktop {
 
 
 form.searchbar--mobile {
+    margin-top: 5px;
     display: flex;
     width: 95%;
     border: 1px solid $light-grey;
@@ -234,11 +237,13 @@ button.searchicon--mobile {
 #header__img {
     flex : 1 1 0;
     max-width: fit-content;
+
     img {
         width: 100%;
         height: auto;
         max-height: 60px;
         max-width: 370px;
+
         
     }
 
@@ -271,6 +276,7 @@ button.searchicon--mobile {
     &:hover {
         background: $dark_grey;
     }
+    align-self: center;
     
 }
 
