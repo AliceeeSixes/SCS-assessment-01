@@ -1,0 +1,122 @@
+.section__topbar {
+    height: fit-content;
+    padding: 14px 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 10px 0 $pale-grey;
+    display: none;
+    @media (min-width: $break-small) {
+        display: block;
+    }
+    &--inner {
+        margin: auto;
+        @media (min-width: $break-small) {
+            width: 720px;
+        }
+        @media (min-width: $break-medium) {
+            width: 940px;
+        }
+        @media (min-width: $break-large) {
+            width: 1170px;
+        }
+        a {
+            font-weight: 600;
+        }
+        font-size: .85em;
+    }
+}
+
+
+
+.contact__card--container {
+    position: relative;
+    margin: auto;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: visible;
+}
+
+.contact__card {
+    border-radius: 10px 10px 0 0;
+    z-index: 0;
+    position: relative;
+    box-shadow: 0 0 10px $pale-grey;
+    height: fit-content;
+    padding: 0 0 20px;
+    display: inline-block;
+    transition: 0.5s ease;
+    p {
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+    }
+    border: 1px solid $pale-grey;
+}
+
+.contact__card--image {
+    border-radius: 10px 10px 0 0;
+    display: block;
+    img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+}
+
+.contact__card {
+    width: 100%;
+    @media (min-width: $break-small) {
+        width: 345px;
+    }
+    @media (min-width: $break-medium) {
+        width: 455px;
+    }
+}
+
+.section__header {
+    h1 {
+        font-size: 2.2em !important;
+    }
+    margin-bottom: 60px !important;
+    
+}
+
+.contact__card--info {
+    padding: 20px 30px;
+    h4 {
+        font-size: 1.25em;
+        margin: 10px 0;
+    }
+    p {
+        margin: 0;
+        color: $med-grey;
+        font-size: .8em;
+        line-height: 1.8;
+    }
+    .contact__phone--number {
+        margin: 0;
+        padding: 10px 0;
+        color: #926fb1;
+        font-weight: 700;
+        font-size: 1.7em;
+    }
+    .contact__card--button {
+        display: flex;
+        background: #926fb1;
+        color: white;
+        &:hover {
+            background: darken(#926fb1, 10%);
+        }
+        height: 50px;
+        width: 150px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        border-radius: 3px;
+    }
+}

@@ -5,7 +5,7 @@
         <!-- Header Controls -->
 
         <!-- NM Logo -->
-        <a href="#"  id="header__img" ><img src="img/netmatters_logo.png" alt="netmatters logo"/></a>
+        <a href="index.php"  id="header__img" ><img src="img/netmatters_logo.png" alt="netmatters logo"/></a>
 
         <div id="header__float-right">
 
@@ -20,7 +20,7 @@
             <a class="header__button" href="#"><i class="fa fa-computer-mouse"></i><h4>SUPPORT</h4></a>
 
             <!-- Contact Button -->
-            <a class="header__button" href="#"><i class="fa fa-paper-plane"></i><h4>CONTACT</h4></a>
+            <a class="header__button" href="contact-us.php"><i class="fa fa-paper-plane"></i><h4>CONTACT</h4></a>
 
 
 

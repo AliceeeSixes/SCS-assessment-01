@@ -316,7 +316,7 @@ body {
 
 main {
   position: relative;
-  top: -30px; }
+  top: 0px; }
 
 #mainpage {
   padding: 0;
@@ -1036,7 +1036,8 @@ button.searchicon--mobile {
   width: 100%;
   position: relative;
   bottom: 50px;
-  user-select: none; }
+  user-select: none;
+  margin-bottom: -30px; }
 
 .dot {
   width: 250px;
@@ -1273,6 +1274,108 @@ footer {
   @media (min-width: 768px) {
     #cookies-popup-buttons {
       flex-direction: row; } }
+
+.section__topbar {
+  height: fit-content;
+  padding: 14px 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 10px 10px 0 #d9dbdc;
+  display: none; }
+  @media (min-width: 768px) {
+    .section__topbar {
+      display: block; } }
+  .section__topbar--inner {
+    margin: auto;
+    font-size: .85em; }
+    @media (min-width: 768px) {
+      .section__topbar--inner {
+        width: 720px; } }
+    @media (min-width: 992px) {
+      .section__topbar--inner {
+        width: 940px; } }
+    @media (min-width: 1260px) {
+      .section__topbar--inner {
+        width: 1170px; } }
+    .section__topbar--inner a {
+      font-weight: 600; }
+
+.contact__card--container {
+  position: relative;
+  margin: auto;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  overflow: visible; }
+
+.contact__card {
+  border-radius: 10px 10px 0 0;
+  z-index: 0;
+  position: relative;
+  box-shadow: 0 0 10px #d9dbdc;
+  height: fit-content;
+  padding: 0 0 20px;
+  display: inline-block;
+  transition: 0.5s ease;
+  border: 1px solid #d9dbdc; }
+  .contact__card p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+
+.contact__card--image {
+  border-radius: 10px 10px 0 0;
+  display: block; }
+  .contact__card--image img {
+    border-radius: 10px 10px 0 0;
+    width: 100%; }
+
+.contact__card {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .contact__card {
+      width: 345px; } }
+  @media (min-width: 992px) {
+    .contact__card {
+      width: 455px; } }
+
+.section__header {
+  margin-bottom: 60px !important; }
+  .section__header h1 {
+    font-size: 2.2em !important; }
+
+.contact__card--info {
+  padding: 20px 30px; }
+  .contact__card--info h4 {
+    font-size: 1.25em;
+    margin: 10px 0; }
+  .contact__card--info p {
+    margin: 0;
+    color: #5d637f;
+    font-size: .8em;
+    line-height: 1.8; }
+  .contact__card--info .contact__phone--number {
+    margin: 0;
+    padding: 10px 0;
+    color: #926fb1;
+    font-weight: 700;
+    font-size: 1.7em; }
+  .contact__card--info .contact__card--button {
+    display: flex;
+    background: #926fb1;
+    color: white;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    border-radius: 3px; }
+    .contact__card--info .contact__card--button:hover {
+      background: #79539a; }
 
 .card {
   box-shadow: 0px 0px 10px #d9dbdc;

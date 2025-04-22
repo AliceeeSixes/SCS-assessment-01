@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -40,7 +39,6 @@
 
 
                 <!-- Hero Image Carousel -->
-                <!-- Currently a static image/text, will be made into a carousel with JS -->
                 <div class="slick">
                     <div class="carousel__slide">
                         <div class="carousel__text container">
