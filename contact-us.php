@@ -46,7 +46,7 @@
                         <div class="section__topbar">
                             <div class="section__topbar--inner">
                                 <a href="index.php">Home</a>
-                                <span> / Our Offices </span>  
+                                <span> / Our Offices </span>
                             </div>
                         </div>
 
@@ -117,6 +117,41 @@
 
                     </section>
 
+                    <!-- Form Section -->
+                    <section>
+                        <div class="contact__form--section container">
+                            <div class="contact__form">
+                                <form>
+                                    <label class="required">Your Name</label>
+                                    <input type="text" name="name" id="name" required />
+
+                                    <label>Company Name</label>
+                                    <input type="text" name="company" id="company"/>
+
+                                    <label class="required">Your Email</label>
+                                    <input type="email" name="email" id="email" required />
+
+                                    <label class="required">Your Telephone Number</label>
+                                    <input type="text" name="phone" id="phone" required />
+
+                                    <label clas="required">Message</label>
+                                    <textarea name="message" cols="50" row="10" id="message"></textarea>
+
+                                </form>
+                            </div>
+
+                            <div class="contact__details">
+                                <h4>Email us on:</h4>
+                                <a><h3>sales@netmatters.com</h3></a>
+
+                                <h4>Speak to Sales on:</h4>
+                                <a><h3>01603 515007</h3></a>
+
+                                <h4>Business hours:</h4>
+                                <h4>Monday - Friday 07:00 - 18:00</h4>
+                            </div>
+                        </div>
+                    </section>
 
 
 
