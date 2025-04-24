@@ -131,16 +131,7 @@
                                             $tel = htmlspecialchars($_POST["phone"]);
                                             $message = htmlspecialchars($_POST["message"]);
 
-                                            echo ($name);
-                                            echo "<br>";
-                                            echo ($company);
-                                            echo "<br>";
-                                            echo ($email);
-                                            echo "<br>";
-                                            echo ($tel);
-                                            echo "<br>";
-                                            echo ($message);
-                                            
+                                            storeMessage($name, $company, $email, $tel, $message);
                                         }
                                         unset($_POST);
                                     ?>
