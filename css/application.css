@@ -411,6 +411,9 @@ span {
     .container {
       width: 1200px; } }
 
+.red-text {
+  color: red; }
+
 #topnav {
   background: #323544; }
 
@@ -1386,9 +1389,63 @@ footer {
     .contact__form--section {
       flex-direction: row; } }
 
-.contact__form,
-.contact__details {
-  border: 1px solid red; }
+.contact-div,
+.contact-div-wide,
+.contact-div-privacy {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .contact-div,
+    .contact-div-wide,
+    .contact-div-privacy {
+      width: 660px; } }
+  @media (min-width: 992px) {
+    .contact-div,
+    .contact-div-wide,
+    .contact-div-privacy {
+      width: 425px; } }
+  @media (min-width: 1260px) {
+    .contact-div,
+    .contact-div-wide,
+    .contact-div-privacy {
+      width: 340px; } }
+
+@media (min-width: 992px) {
+  .contact-div-wide,
+  .contact-div-privacy {
+    width: 100%; } }
+
+.contact-div-privacy {
+  flex-direction: row;
+  padding-top: 10px; }
+  .contact-div-privacy input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none; }
+    .contact-div-privacy input[type="checkbox"]::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 32px;
+      border: 2px solid #212330;
+      border-radius: 3px;
+      outline: none;
+      box-sizing: border-box;
+      background: #d9dbdc; }
+    .contact-div-privacy input[type="checkbox"]:checked::after {
+      background: #212330;
+      content: "\2713";
+      color: white;
+      text-align: center;
+      align-content: center;
+      font-size: 1.5em; }
+  .contact-div-privacy a {
+    text-decoration: underline; }
+  .contact-div-privacy span {
+    width: auto; }
 
 .contact__form {
   width: 100%; }
@@ -1397,9 +1454,11 @@ footer {
       width: 770px; } }
   .contact__form form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background: #d9dbdc;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px; }
     .contact__form form label {
       font-weight: 500;
@@ -1411,16 +1470,61 @@ footer {
     .contact__form form input {
       height: 50px; }
     .contact__form form textarea {
-      height: 100px; }
+      height: 100px;
+      width: 100%; }
     .contact__form form .required::after {
       content: " *";
       color: red; }
+
+@media (min-width: 992px) {
+  .contact-div {
+    margin: 0; } }
 
 .contact__details {
   width: 100%; }
   @media (min-width: 1260px) {
     .contact__details {
       width: 370px; } }
+
+.contact-checkbox-text {
+  line-height: 2;
+  text-wrap: pretty;
+  padding-left: 10px; }
+
+.contact-small-text {
+  padding-top: 20px;
+  font-size: .7em; }
+
+.contact-small-text,
+.contact-checkbox-text {
+  color: #323544;
+  font-weight: 600; }
+  .contact-small-text a,
+  .contact-checkbox-text a {
+    text-decoration: underline; }
+    .contact-small-text a:hover,
+    .contact-checkbox-text a:hover {
+      color: #212330; }
+
+.contact-submit-div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%; }
+  .contact-submit-div span {
+    align-content: center; }
+  .contact-submit-div input[type="submit"] {
+    font-size: 1.1em;
+    padding: 5px 15px;
+    background: #323544;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; }
+    .contact-submit-div input[type="submit"]:hover {
+      background: #212330; }
 
 .card {
   box-shadow: 0px 0px 10px #d9dbdc;

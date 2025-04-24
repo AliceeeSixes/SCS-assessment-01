@@ -122,20 +122,46 @@
                         <div class="contact__form--section container">
                             <div class="contact__form">
                                 <form>
-                                    <label class="required">Your Name</label>
-                                    <input type="text" name="name" id="name" required />
+                                    <div class="contact-div">
+                                        <label class="required">Your Name</label>
+                                        <input type="text" name="name" id="name" required />
+                                    </div>
 
-                                    <label>Company Name</label>
-                                    <input type="text" name="company" id="company"/>
+                                    <div class="contact-div">
+                                        <label>Company Name</label>
+                                        <input type="text" name="company" id="company"/>
+                                    </div>
 
-                                    <label class="required">Your Email</label>
-                                    <input type="email" name="email" id="email" required />
+                                    <div class="contact-div">
+                                        <label class="required">Your Email</label>
+                                        <input type="email" name="email" id="email" required />
+                                    </div>
 
-                                    <label class="required">Your Telephone Number</label>
-                                    <input type="text" name="phone" id="phone" required />
+                                    <div class="contact-div">
+                                        <label class="required">Your Telephone Number</label>
+                                        <input type="text" name="phone" id="phone" required />
+                                    </div>
 
-                                    <label clas="required">Message</label>
-                                    <textarea name="message" cols="50" row="10" id="message"></textarea>
+                                    <div class="contact-div-wide">
+                                        <label clas="required">Message</label>
+                                        <textarea name="message" cols="50" row="10" id="message"></textarea>
+                                    </div>
+
+                                    <div class="contact-div-privacy">
+                                        <div class="checkbox">
+                                            <input type="checkbox" />
+                                        </div>
+                                        <span class="contact-checkbox-text">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe</span>
+                                    </div>
+
+                                    <div class="contact-div-wide">
+                                        <span class="contact-small-text">This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+                                    </div>
+
+                                    <div class="contact-submit-div">
+                                        <input type="submit" value="SEND ENQUIRY"/>
+                                        <span><span class="red-text">*</span> Fields Required</span>
+                                    </div>
 
                                 </form>
                             </div>

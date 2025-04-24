@@ -132,9 +132,65 @@
 
 }
 
-.contact__form,
-.contact__details {
-    border: 1px solid red;
+.contact-div,
+.contact-div-wide,
+.contact-div-privacy {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    @media (min-width: $break-small) {
+        width: 660px;
+    }
+    @media (min-width: $break-medium) {
+        width: 425px;
+    }
+    @media (min-width: $break-large) {
+        width: 340px;
+    }
+}
+.contact-div-wide,
+.contact-div-privacy {
+    @media (min-width: $break-medium) {
+        width: 100%;
+    }
+}
+
+.contact-div-privacy {
+    flex-direction: row;
+    padding-top: 10px;
+
+    input[type="checkbox"] {
+        width: 32px;
+        height: 32px;
+        border: none;
+        outline: none;
+        &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid $dark-grey;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+        background: $pale-grey;
+        }
+        &:checked::after {
+            background: $dark-grey;
+            content: "\2713";
+            color: white;
+            text-align: center;
+            align-content: center;
+            font-size: 1.5em;
+        }
+    }
+    a {
+        text-decoration: underline;
+    }
+    span {
+        width: auto;
+    }
 }
 
 .contact__form {
@@ -145,9 +201,11 @@
 
     form {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         background: $pale-grey;
-        padding: 20px;
+        padding: 30px;
         border-radius: 10px;
         label {
             font-weight: 500;
@@ -163,6 +221,7 @@
         }
         textarea {
             height: 100px;
+            width: 100%;
         }
         .required::after {
             content: " *";
@@ -171,10 +230,62 @@
     }
 }
 
+.contact-div {
+    @media (min-width: $break-medium) {
+        margin: 0;
+    }
+}
 .contact__details {
     width: 100%;
     @media (min-width: $break-large) {
         width: 370px;
     }
 
+}
+
+.contact-checkbox-text {
+    line-height: 2;
+    text-wrap: pretty;
+    padding-left: 10px;
+}
+
+.contact-small-text {
+    padding-top: 20px;
+    font-size: .7em;
+}
+
+.contact-small-text,
+.contact-checkbox-text {
+    color: $grey;
+    font-weight: 600;
+    a {
+        text-decoration: underline;
+        &:hover {
+            color: $dark-grey;
+        }
+    }
+}
+
+.contact-submit-div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    span {
+        align-content: center;
+    }
+    input[type="submit"] {
+        font-size: 1.1em;
+        padding: 5px 15px;
+        background: $grey;
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover {
+            background: $dark-grey;
+        }
+    }
 }
