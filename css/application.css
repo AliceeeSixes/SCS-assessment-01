@@ -1526,6 +1526,9 @@ footer {
     .contact-submit-div input[type="submit"]:hover {
       background: #212330; }
 
+.form-error {
+  border: 1px solid red !important; }
+
 .card {
   box-shadow: 0px 0px 10px #d9dbdc;
   border: 1px solid #d9dbdc;

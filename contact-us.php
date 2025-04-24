@@ -20,6 +20,7 @@
 
 
 <body>
+    <?php require_once("inc/db-connection.php"); ?>
     
     <!-- Page Wrapper -->
     <div class="wrapper">
@@ -121,7 +122,29 @@
                     <section>
                         <div class="contact__form--section container">
                             <div class="contact__form">
-                                <form>
+                                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" onsubmit="return validateForm()" novalidate>
+                                    <?php
+                                        if (isset($_POST)) {
+                                            $name = htmlspecialchars($_POST["name"]);
+                                            $company = htmlspecialchars($_POST["company"]);
+                                            $email = htmlspecialchars($_POST["email"]);
+                                            $tel = htmlspecialchars($_POST["phone"]);
+                                            $message = htmlspecialchars($_POST["message"]);
+
+                                            echo ($name);
+                                            echo "<br>";
+                                            echo ($company);
+                                            echo "<br>";
+                                            echo ($email);
+                                            echo "<br>";
+                                            echo ($tel);
+                                            echo "<br>";
+                                            echo ($message);
+                                            
+                                        }
+                                        unset($_POST);
+                                    ?>
+                                    <div class="contact-div-wide" id="contact-response"></div>
                                     <div class="contact-div">
                                         <label class="required">Your Name</label>
                                         <input type="text" name="name" id="name" required />
@@ -143,7 +166,7 @@
                                     </div>
 
                                     <div class="contact-div-wide">
-                                        <label clas="required">Message</label>
+                                        <label class="required">Message</label>
                                         <textarea name="message" cols="50" row="10" id="message"></textarea>
                                     </div>
 
@@ -212,6 +235,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
 
 </body>
 
