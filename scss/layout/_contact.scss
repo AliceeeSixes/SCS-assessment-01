@@ -240,6 +240,15 @@
     @media (min-width: $break-large) {
         width: 370px;
     }
+    h4 {
+        font-weight: 600;
+        padding: 10px 0;
+    }
+    h3 {
+        color: lighten($affair, 10%);
+        font-weight: 600;
+        font-size: 1.5em;
+    }
 
 }
 
@@ -292,4 +301,20 @@
 
 .form-error {
     border: 1px solid red !important;
+}
+
+#out-of-hours-toggle {
+    font-weight: 600;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#out-of-hours-text {
+    display: none;
+    transition: 0.3s ease;
+    &.show {
+        display: block;
+    }
 }

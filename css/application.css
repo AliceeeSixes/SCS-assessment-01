@@ -1485,6 +1485,13 @@ footer {
   @media (min-width: 1260px) {
     .contact__details {
       width: 370px; } }
+  .contact__details h4 {
+    font-weight: 600;
+    padding: 10px 0; }
+  .contact__details h3 {
+    color: #9971b2;
+    font-weight: 600;
+    font-size: 1.5em; }
 
 .contact-checkbox-text {
   line-height: 2;
@@ -1528,6 +1535,18 @@ footer {
 
 .form-error {
   border: 1px solid red !important; }
+
+#out-of-hours-toggle {
+  font-weight: 600;
+  cursor: pointer; }
+  #out-of-hours-toggle:hover {
+    text-decoration: underline; }
+
+#out-of-hours-text {
+  display: none;
+  transition: 0.3s ease; }
+  #out-of-hours-text.show {
+    display: block; }
 
 .card {
   box-shadow: 0px 0px 10px #d9dbdc;
