@@ -1,9 +1,14 @@
 <?php
+require_once realpath(__DIR__ . "/../vendor/autoload.php");
+use Dotenv\Dotenv;
 
-$db_servername = "localhost";
-$db_username = "root";
-$db_password = "";
-$db_name = "nm-db";
+$dotenv = Dotenv::createImmutable(__DIR__ . "/../");
+$dotenv->load();
+
+$db_servername = $_ENV["HOST"];
+$db_username = $_ENV["USER"];
+$db_password = $_ENV["PASSWORD"];
+$db_name = $_ENV["DB_NAME"];
 
 
 // Initial connection

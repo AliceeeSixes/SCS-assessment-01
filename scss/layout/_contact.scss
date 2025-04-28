@@ -318,3 +318,34 @@
         display: block;
     }
 }
+
+.form-send-success {
+    background: #2ECC71;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    div {
+        align-self: center;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &::after {
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow: visible;
+            font-size: 1.5em;
+            font-weight: 600;
+            content: "\00D7";
+            color: black;
+            opacity: 0.2;
+            text-align: center;
+            align-content: center;
+        }
+    }
+}

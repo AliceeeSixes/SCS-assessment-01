@@ -20,7 +20,7 @@
 
 
 <body>
-    <?php require_once("inc/db-connection.php"); ?>
+    <?php require_once("inc/db-connection.php");?>
     
     <!-- Page Wrapper -->
     <div class="wrapper">
@@ -133,7 +133,7 @@
 
                                             if ($name && $email && $tel && $message) {
                                                 storeMessage($name, $company, $email, $tel, $message);
-                                                echo "Form submitted";
+                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div></div></div>";
                                             }
                                         }
                                         unset($_POST);

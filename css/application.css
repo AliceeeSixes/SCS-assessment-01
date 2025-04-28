@@ -1548,6 +1548,34 @@ footer {
   #out-of-hours-text.show {
     display: block; }
 
+.form-send-success {
+  background: #2ECC71;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%; }
+  .form-send-success div {
+    align-self: center;
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer; }
+    .form-send-success div::after {
+      display: block;
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+      font-size: 1.5em;
+      font-weight: 600;
+      content: "\00D7";
+      color: black;
+      opacity: 0.2;
+      text-align: center;
+      align-content: center; }
+
 .card {
   box-shadow: 0px 0px 10px #d9dbdc;
   border: 1px solid #d9dbdc;
