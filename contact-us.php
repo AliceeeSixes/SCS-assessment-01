@@ -131,8 +131,10 @@
                                             $tel = htmlspecialchars($_POST["phone"]);
                                             $message = htmlspecialchars($_POST["message"]);
 
-                                            storeMessage($name, $company, $email, $tel, $message);
-                                            echo "Form submitted";
+                                            if ($name && $email && $tel && $message) {
+                                                storeMessage($name, $company, $email, $tel, $message);
+                                                echo "Form submitted";
+                                            }
                                         }
                                         unset($_POST);
                                     ?>

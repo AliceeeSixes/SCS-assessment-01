@@ -1,7 +1,14 @@
 <?php
+
+$db_servername = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "nm-db";
+
+
 // Initial connection
 try {
-    $db = new PDO("sqlite:".__DIR__."/nm.db");
+    $db = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $e) {
     echo "Database connection failed";
