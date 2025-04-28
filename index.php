@@ -20,6 +20,7 @@
 
 
 <body>
+    <?php require_once("inc/db-connection.php"); ?>
     
     <!-- Page Wrapper -->
     <div class="wrapper">
@@ -281,6 +282,7 @@
 
 
                     <!-- Latest News Section -->
+                    <?php $news_items = getNews();?>
                     <section id="news-section">
 
                         <div class="section__header container">
@@ -292,21 +294,22 @@
                         <div class="news__container container">
 
                             <div class="news__item">
+                                <?php $news_item = $news_items[0]; ?>
 
                                 <!-- Main Link-->
                                 <a href="#">
 
                                     <!-- Image -->
                                     <div class="news__item--image">
-                                        <img src="img/news/digital-marketing-executive-6fBe.webp" alt="Image with a banner that reads 'we are hiring'"/>
+                                        <img src="<?php echo $news_item['IMG']; ?>"/>
                                         
                                     </div>
 
 
                                     <!-- Text Content -->
                                     <div class="news__item--content">
-                                        <h3>Digital Marketing Executive</h3>
-                                        <p>Salary Range £28,000 - £34,000 + Pension Hours 40 hours per week, Mon - Fri Location Wymondham, Norfolk/hybrid following a successful probation period</p>
+                                        <h3><?php echo $news_item['TITLE']; ?></h3>
+                                        <p><?php echo $news_item['ABSTRACT']; ?></p>
 
                                         <!-- "Read More" Button -->
                                         <div class="news__item--button">READ MORE</div>
@@ -315,11 +318,11 @@
                                         <!-- Housing for author details/picutre/publish date -->
                                         <div class="news__item--author">
                                             <div class="news__item--avatar">
-                                                <img src="img/news/bethany-shakespeare-F6Iu.webp" alt="an image of Bethany Shakespeare"/>
+                                                <img src="<?php echo $news_item['AUTHOR_IMAGE']; ?>"/>
                                             </div>
                                             <div class="news__item--author-details">
-                                                <p>Posted by Bethany Shakespeare</p>
-                                                <p>4th December 2024</p>
+                                                <p>Posted by <?php echo $news_item['AUTHOR']; ?></p>
+                                                <p><?php $date=date_create($news_item['DATE']); echo date_format($date, "jS F Y");?></p>
 
                                             </div>
 
@@ -328,25 +331,27 @@
                                     </div>
                                 </a>
                                 <!-- Inset Card Link-->
-                                <a class="news__item--inset white" href="#">Careers</a>
+                                <a class="news__item--inset white" href="#"><?php echo $news_item['CATEGORY'];?></a>
 
                             </div>
 
                             <div class="news__item">
+                                <?php $news_item = $news_items[1]; ?>
 
                                 <!-- Main Link-->
                                 <a href="#">
 
                                     <!-- Image -->
                                     <div class="news__item--image">
-                                        <img src="img/news/why-do-you-GFhS.webp" alt="A stock image of tablet devices"/>
+                                        <img src="<?php echo $news_item['IMG']; ?>"/>
+                                        
                                     </div>
 
 
                                     <!-- Text Content -->
                                     <div class="news__item--content">
-                                        <h3>Why Do You Need A Bespoke Website?</h3>
-                                        <p>Why do you need a bespoke website? If you're in the market for a new website, it can be difficult to decie which type of website is best suited to your need</p>
+                                        <h3><?php echo $news_item['TITLE']; ?></h3>
+                                        <p><?php echo $news_item['ABSTRACT']; ?></p>
 
                                         <!-- "Read More" Button -->
                                         <div class="news__item--button">READ MORE</div>
@@ -355,11 +360,11 @@
                                         <!-- Housing for author details/picutre/publish date -->
                                         <div class="news__item--author">
                                             <div class="news__item--avatar">
-                                                <img src="img/news/netmatters-ltd-VXAv.webp" alt="the Netmatters logo"/>
+                                                <img src="<?php echo $news_item['AUTHOR_IMAGE']; ?>"/>
                                             </div>
                                             <div class="news__item--author-details">
-                                                <p>Posted by Netmatters</p>
-                                                <p>27th November 2024</p>
+                                                <p>Posted by <?php echo $news_item['AUTHOR']; ?></p>
+                                                <p><?php $date=date_create($news_item['DATE']); echo date_format($date, "jS F Y");?></p>
 
                                             </div>
 
@@ -368,26 +373,27 @@
                                     </div>
                                 </a>
                                 <!-- Inset Card Link-->
-                                <a class="news__item--inset white" href="#">Insights</a>
-
+                                <a class="news__item--inset white" href="#"><?php echo $news_item['CATEGORY'];?></a>
 
                             </div>
 
                             <div class="news__item">
+                                <?php $news_item = $news_items[2]; ?>
 
-                                <!-- Main Link -->
+                                <!-- Main Link-->
                                 <a href="#">
 
                                     <!-- Image -->
                                     <div class="news__item--image">
-                                        <img src="img/news/business-development-executive-AIfQ.webp" alt="An image with a banner that reads 'we are hiring'"/>
+                                        <img src="<?php echo $news_item['IMG']; ?>"/>
+                                        
                                     </div>
 
 
                                     <!-- Text Content -->
                                     <div class="news__item--content">
-                                        <h3>Business Development Executive</h3>
-                                        <p>Salary Range £26k - £36k per annum + Bonus Hours 40 hours per week, Monday - Friday Location Wymondham, Norfolk/hybrid following a successful probation period</p>
+                                        <h3><?php echo $news_item['TITLE']; ?></h3>
+                                        <p><?php echo $news_item['ABSTRACT']; ?></p>
 
                                         <!-- "Read More" Button -->
                                         <div class="news__item--button">READ MORE</div>
@@ -396,11 +402,11 @@
                                         <!-- Housing for author details/picutre/publish date -->
                                         <div class="news__item--author">
                                             <div class="news__item--avatar">
-                                                <img src="img/news/michelle-barber-NwLx.webp" alt="an empty placeholder profile picture"/>
+                                                <img src="<?php echo $news_item['AUTHOR_IMAGE']; ?>"/>
                                             </div>
                                             <div class="news__item--author-details">
-                                                <p>Posted by Rebecca Moore</p>
-                                                <p>20th November 2024</p>
+                                                <p>Posted by <?php echo $news_item['AUTHOR']; ?></p>
+                                                <p><?php $date=date_create($news_item['DATE']); echo date_format($date, "jS F Y");?></p>
 
                                             </div>
 
@@ -408,10 +414,8 @@
                                         </div>
                                     </div>
                                 </a>
-
                                 <!-- Inset Card Link-->
-                                <a class="news__item--inset white" href="#">Careers</a>
-
+                                <a class="news__item--inset white" href="#"><?php echo $news_item['CATEGORY'];?></a>
 
                             </div>
 

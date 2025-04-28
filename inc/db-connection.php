@@ -11,7 +11,7 @@ $db_password = $_ENV["PASSWORD"];
 $db_name = $_ENV["DB_NAME"];
 
 
-// Initial connection
+// Messages connection
 try {
     $db = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,6 +21,15 @@ try {
     exit;
 }
 
+// News connection
+try {
+    $news = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
+    $news->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (Exception $e) {
+    echo "Database connection failed";
+    echo $e->getMessage();
+    exit;
+}
 
 // Fetch News Articles
 // To-do: write this functionality
@@ -41,6 +50,13 @@ function storeMessage($name, $company, $email, $tel, $message) {
 
 function receiveContactForm() {
     echo('<script>alert("form");</script>');
+}
+
+function getNews() {
+    global $news;
+    $result = $news->query("SELECT * FROM NEWS ORDER BY DATE DESC LIMIT 3");
+    $news_array = $result->fetchAll(PDO::FETCH_ASSOC);
+    return $news_array;
 }
 
 ?>
