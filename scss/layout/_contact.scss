@@ -322,30 +322,35 @@
 .form-send-success {
     background: #2ECC71;
     color: white;
+}
+
+.form-failed-message {
+    background: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+.form-send-succes,
+.form-failed-message {
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
+    margin: 5px 0;
+    p {
+        margin: 0;
+    }
     div {
         align-self: center;
         display: block;
         width: 20px;
         height: 20px;
         cursor: pointer;
-        &::after {
-            display: block;
-            height: 100%;
-            width: 100%;
-            overflow: visible;
-            font-size: 1.5em;
-            font-weight: 600;
-            content: "\00D7";
-            color: black;
-            opacity: 0.2;
-            text-align: center;
-            align-content: center;
-        }
+        color: black;
+        opacity: .2;
+        font-size: 1.5em;
+        font-weight: 600;
     }
 }

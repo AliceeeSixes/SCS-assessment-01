@@ -122,7 +122,7 @@
                     <section>
                         <div class="contact__form--section container">
                             <div class="contact__form">
-                                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" onsubmit="return validateForm()" novalidate>
+                                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" onsubmit="return validateForm()" novalidate id="contact-us-form">
                                     <?php
                                         if (isset($_POST)) {
                                             $name = htmlspecialchars($_POST["name"]);
@@ -133,7 +133,7 @@
 
                                             if ($name && $email && $tel && $message) {
                                                 storeMessage($name, $company, $email, $tel, $message);
-                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div></div></div>";
+                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div class='close-message'></div></div>";
                                             }
                                         }
                                         unset($_POST);

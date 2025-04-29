@@ -1,7 +1,7 @@
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // Regex for testing emails
 const phoneRegex = /((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))/; // Regex for testing phone
 
-$("form").on("click", function(event) {
+$("#contact-us-form").on("click", function(event) {
     $(event.target).removeClass("form-error");
 })
 
@@ -17,26 +17,27 @@ function validateForm() {
     // validate name
     if (!name) {
         invalid_fields.push("#name");
-        console.log("invalid name");
-        console.log(name);
     }
     // validate email
-    if (!validateEmail(email)) {
+    if (!email) {
         invalid_fields.push("#email");
-        console.log("invalid email");
-        console.log(email);
+    } else if (!validateEmail(email)) {
+        invalid_fields.push("#email");
+        formError("Invalid email address");
     }
     // validate phone
-    if (!validatePhone(phone)) {
+    if (!phone) {
         invalid_fields.push("#phone");
-        console.log("invalid phone");
-        console.log(phone);
+    } else if (!validatePhone(phone)) {
+        invalid_fields.push("#phone");
+        formError("Invalid phone number");
     }
     // validate message
     if (!message) {
         invalid_fields.push("#message");
-        console.log("invalid message");
-        console.log(message);
+    } else if (message.length < 5) {
+        invalid_fields.push("#message");
+        formError("Message must be at least 5 characters");
     }
 
 
@@ -66,3 +67,7 @@ function validatePhone(phone) {
     return(result);
 }
 
+function formError(message) {
+    let $newdiv = $(`<div class='form-failed-message'><p>${message}</p><div class="close-message">&times;</div></div>`);
+    $("#contact-us-form").prepend($newdiv);
+}
