@@ -1557,7 +1557,7 @@ footer {
   border: 1px solid #ebccd1;
   color: #a94442; }
 
-.form-send-succes,
+.form-send-success,
 .form-failed-message {
   display: flex;
   justify-content: space-between;
@@ -1566,10 +1566,10 @@ footer {
   padding: 15px;
   width: 100%;
   margin: 5px 0; }
-  .form-send-succes p,
+  .form-send-success p,
   .form-failed-message p {
     margin: 0; }
-  .form-send-succes div,
+  .form-send-success div,
   .form-failed-message div {
     align-self: center;
     display: block;

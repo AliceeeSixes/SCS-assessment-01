@@ -133,7 +133,7 @@
 
                                             if ($name && $email && $tel && $message) {
                                                 storeMessage($name, $company, $email, $tel, $message);
-                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div class='close-message'></div></div>";
+                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div class='close-message'>&times;</div></div>";
                                             }
                                         }
                                         unset($_POST);
