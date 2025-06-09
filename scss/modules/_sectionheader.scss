@@ -55,3 +55,21 @@
     font-weight: 600;
     font-size: 2.25em;
 }
+
+.contact .section__header {
+    margin-top: 0;
+    color: white;
+    @media (min-width: $break-medium) {
+        margin-top: 30px;
+        color: $grey;
+    }
+
+}
+
+.contact__title--background {
+    height: fit-content;
+    background: $grey;
+    @media (min-width: $break-medium) {
+        background: white;
+    }
+}

@@ -11,6 +11,8 @@ $db_password = $_ENV["PASSWORD"];
 $db_name = $_ENV["DB_NAME"];
 
 
+
+
 // Messages connection
 try {
     $db = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
@@ -31,26 +33,59 @@ try {
     exit;
 }
 
-// Fetch News Articles
-// To-do: write this functionality
+// Validate Message
 
+function validateMessage ($name, $company, $email, $tel, $message, $marketing) {
+    $valid = true;
+    $invalidValues = [];
+    if (! $name) {
+        $valid = false;
+        array_push($invalidValues, "Name");
+    }
+    if (! ($email && filter_var($email, FILTER_VALIDATE_EMAIL))) {
+        $valid = false;
+        array_push($invalidValues, "Email");
+    }
+    if (! $tel) {
+        $valid = false;
+        array_push($invalidValues, "Telephone");
+    }
+    if (! ($message && strlen($message) >= 5)) {
+        $valid = false;
+        array_push($invalidValues, "Message");
+    }
+    if ($marketing) {
+        $marketing = true;
+    } else {
+        $marketing = false;
+    }
+
+
+    if ($valid) {
+        return (storeMessage($name, $company, $email, $tel, $message, $marketing));
+    } else {
+        // Throw exception
+        $error = "Invalid or missing details: " . implode(", ", $invalidValues);
+        echo "<script>formError('$error')</script>";
+        return false;
+    }
+}
 
 // Store Message in db
-function storeMessage($name, $company, $email, $tel, $message) {
+function storeMessage($name, $company, $email, $tel, $message, $marketing) {
     global $db;
-    $sql = $db->prepare("INSERT INTO MESSAGES (NAME, COMPANY, EMAIL, PHONE, MESSAGE) VALUES (?, ?, ?, ?, ?)");
+    $sql = $db->prepare("INSERT INTO MESSAGES (NAME, COMPANY, EMAIL, PHONE, MESSAGE, MARKETING) VALUES (?, ?, ?, ?, ?, ?)");
     $sql->bindParam(1, $name);
     $sql->bindParam(2, $company);
     $sql->bindParam(3, $email);
     $sql->bindParam(4, $tel);
     $sql->bindParam(5, $message);
+    $sql->bindParam(6, $marketing);
     $sql->execute();
+    echo "<div class='form-send-success'><p>Your message has been sent!<p><div class='close-message'>&times;</div></div>";
+    return true;
 }
 
-
-function receiveContactForm() {
-    echo('<script>alert("form");</script>');
-}
 
 function getNews() {
     global $news;

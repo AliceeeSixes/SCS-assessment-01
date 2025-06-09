@@ -1466,7 +1466,9 @@ footer {
     .contact__form form input,
     .contact__form form textarea {
       border: 1px solid #a3a8ac;
-      box-shadow: inset 0 1px 1px #d9dbdc; }
+      box-shadow: inset 0 1px 1px #d9dbdc;
+      padding: 5px 15px;
+      color: #323544; }
     .contact__form form input {
       height: 50px; }
     .contact__form form textarea {
@@ -2092,6 +2094,21 @@ button.blue {
 #news-section .section__header h1 {
   font-weight: 600;
   font-size: 2.25em; }
+
+.contact .section__header {
+  margin-top: 0;
+  color: white; }
+  @media (min-width: 992px) {
+    .contact .section__header {
+      margin-top: 30px;
+      color: #323544; } }
+
+.contact__title--background {
+  height: fit-content;
+  background: #323544; }
+  @media (min-width: 992px) {
+    .contact__title--background {
+      background: white; } }
 
 .news__container {
   position: relative;

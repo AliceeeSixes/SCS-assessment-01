@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="css/application.css" />
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/form.js"></script>
+
+
+
+
 
 
     <title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
@@ -21,6 +27,7 @@
 
 <body>
     <?php require_once("inc/db-connection.php");?>
+
     
     <!-- Page Wrapper -->
     <div class="wrapper">
@@ -52,9 +59,11 @@
                         </div>
 
                         <div class="contact">
-                            <div class="section__header container">
-                                <h1>Our Offices</h1>
-                                <h1></h1>
+                            <div class="contact__title--background">
+                                <div class="section__header container">
+                                    <h1>Our Offices</h1>
+                                    <h1></h1>
+                                </div>
                             </div>
                             <div class="contact__card--container container">
 
@@ -130,43 +139,61 @@
                                             $email = htmlspecialchars($_POST["email"]);
                                             $tel = htmlspecialchars($_POST["phone"]);
                                             $message = htmlspecialchars($_POST["message"]);
+                                            $marketing = htmlspecialchars($_POST["marketing"]);
 
-                                            if ($name && $email && $tel && $message) {
-                                                storeMessage($name, $company, $email, $tel, $message);
-                                                echo "<div class='form-send-success'><p>Your message has been sent!<p><div class='close-message'>&times;</div></div>";
+                                            if (validateMessage($name, $company, $email, $tel, $message, $marketing)) {
+                                                $sent = true;
+                                            } else {
+                                                $sent = false;
                                             }
+
                                         }
                                         unset($_POST);
                                     ?>
                                     <div class="contact-div-wide" id="contact-response"></div>
                                     <div class="contact-div">
                                         <label class="required">Your Name</label>
-                                        <input type="text" name="name" id="name" required />
+                                        <?php
+                                            $value = isset($name) ? $name : "";
+                                        ?>
+                                        <input type="text" name="name" id="name" required value='<?php echo ($sent ? "" : "$value") ?>' />
                                     </div>
 
                                     <div class="contact-div">
                                         <label>Company Name</label>
-                                        <input type="text" name="company" id="company"/>
+                                        <?php
+                                            $value = $company ? $company : "";
+                                        ?>
+                                        <input type="text" name="company" id="company" value='<?php echo ($sent ? "" : "$value") ?>' />
                                     </div>
 
                                     <div class="contact-div">
                                         <label class="required">Your Email</label>
-                                        <input type="email" name="email" id="email" required />
+                                        <?php
+                                            $value = $email ? $email : "";
+                                        ?>
+                                        <input type="email" name="email" id="email" required value='<?php echo ($sent ? "" : "$value") ?>' />
                                     </div>
 
                                     <div class="contact-div">
                                         <label class="required">Your Telephone Number</label>
-                                        <input type="text" name="phone" id="phone" required />
+                                        <?php
+                                            $value = $tel ? $tel : "";
+                                        ?>
+                                        <input type="text" name="phone" id="phone" required value='<?php echo ($sent ? "" : "$value") ?>' />
                                     </div>
 
                                     <div class="contact-div-wide">
                                         <label class="required">Message</label>
-                                        <textarea name="message" cols="50" row="10" id="message"></textarea>
+                                        <?php
+                                            $value = $message ? $message : "";
+                                        ?>
+                                        <textarea name="message" cols="50" row="10" id="message"><?php echo ($sent ? "" : "$value") ?></textarea>
                                     </div>
 
                                     <div class="contact-div-privacy">
                                         <div class="checkbox">
-                                            <input type="checkbox" />
+                                            <input name="marketing" type="checkbox" <?php if($marketing) { echo "checked"; }?>/>
                                         </div>
                                         <span class="contact-checkbox-text">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe</span>
                                     </div>
@@ -235,11 +262,10 @@
 
 
     <!-- JavaScript Imports -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+
 
 </body>
 
