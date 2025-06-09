@@ -55,9 +55,9 @@ function validateMessage ($name, $company, $email, $tel, $message, $marketing) {
         array_push($invalidValues, "Message");
     }
     if ($marketing) {
-        $marketing = true;
+        $marketing = 1;
     } else {
-        $marketing = false;
+        $marketing = 0;
     }
 
 

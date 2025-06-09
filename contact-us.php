@@ -133,13 +133,17 @@
                             <div class="contact__form">
                                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" onsubmit="return validateForm()" novalidate id="contact-us-form">
                                     <?php
-                                        if (isset($_POST)) {
+                                        if (isset($_POST) && ! (empty($_POST))) {
                                             $name = htmlspecialchars($_POST["name"]);
                                             $company = htmlspecialchars($_POST["company"]);
                                             $email = htmlspecialchars($_POST["email"]);
                                             $tel = htmlspecialchars($_POST["phone"]);
                                             $message = htmlspecialchars($_POST["message"]);
-                                            $marketing = htmlspecialchars($_POST["marketing"]);
+                                            if (isset($_POST["marketing"])) {
+                                                $marketing = htmlspecialchars($_POST["marketing"]);
+                                            } else {
+                                                $marketing = false;
+                                            }
 
                                             if (validateMessage($name, $company, $email, $tel, $message, $marketing)) {
                                                 $sent = true;

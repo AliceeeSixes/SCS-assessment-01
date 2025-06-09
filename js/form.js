@@ -6,7 +6,6 @@ $("#contact-us-form").on("click", function(event) {
 })
 
 function validateForm() {
-    return true; // FOR TESTING -- REMOVE LATER
     let name = $("#name").val();
     let email = $("#email").val();
     let phone = $("#phone").val();
