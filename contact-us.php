@@ -197,9 +197,15 @@
 
                                     <div class="contact-div-privacy">
                                         <div class="checkbox">
-                                            <input name="marketing" type="checkbox" <?php if($marketing) { echo "checked"; }?>/>
+                                            <input id="marketing" name="marketing" type="checkbox" <?php if($marketing) { echo "checked"; }?>/>
                                         </div>
-                                        <span class="contact-checkbox-text">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe</span>
+                                        <span class="contact-checkbox-text" onclick="toggleMarketing()">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe</span>
+                                        <script>
+                                            function toggleMarketing() {
+                                                marketing = document.getElementById("marketing");
+                                                marketing.checked = !marketing.checked;
+                                            }
+                                        </script>
                                     </div>
 
                                     <div class="contact-div-wide">

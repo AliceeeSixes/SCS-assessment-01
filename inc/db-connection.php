@@ -46,7 +46,7 @@ function validateMessage ($name, $company, $email, $tel, $message, $marketing) {
         $valid = false;
         array_push($invalidValues, "Email");
     }
-    if (! $tel) {
+    if (! ($tel && preg_match('/^(?:(?:\+44\s?|0)(?:1|2|3|7)(?:\d\s?){8,9})$/', $tel))) {
         $valid = false;
         array_push($invalidValues, "Telephone");
     }

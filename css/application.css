@@ -620,7 +620,7 @@ header * {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0 15px;
+  padding: 0;
   height: 100%;
   margin: auto;
   justify-content: space-between;
@@ -1498,7 +1498,8 @@ footer {
 .contact-checkbox-text {
   line-height: 2;
   text-wrap: pretty;
-  padding-left: 10px; }
+  padding-left: 10px;
+  user-select: none; }
 
 .contact-small-text {
   padding-top: 20px;
